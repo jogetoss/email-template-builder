@@ -1,0 +1,171 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Agenda: #form.meeting.title#",
+    "preheader": "#form.meeting.date#, #form.meeting.time#",
+    "backgroundColor": "#f1f8f5",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#087f5b",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "16px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.BadgeBlock",
+      "properties": {
+        "text": "#form.meeting.date# &middot; #form.meeting.time#",
+        "shape": "pill",
+        "backgroundColor": "#e6fcf5",
+        "textColor": "#087f5b",
+        "padding": "32px 32px 0px 32px",
+        "fontSize": "11px",
+        "size": "44px",
+        "bold": "true",
+        "spaced": "true",
+        "align": "left"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><strong>#form.meeting.title#</strong></p>",
+        "fontSize": "26px",
+        "color": "#0b3d2e",
+        "padding": "14px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>#form.meeting.room# &middot; <a href=\"https://example.com/join\">Join online</a></p>",
+        "fontSize": "14px",
+        "color": "#6b7280",
+        "padding": "4px 32px 16px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TimelineBlock",
+      "properties": {
+        "items": [
+          {
+            "time": "10:00",
+            "title": "Welcome and goals",
+            "detail": "Priya &middot; 5 min",
+            "color": ""
+          },
+          {
+            "time": "10:05",
+            "title": "Q4 roadmap",
+            "detail": "Sam &middot; 20 min",
+            "color": ""
+          },
+          {
+            "time": "10:25",
+            "title": "Customer feedback",
+            "detail": "Alex &middot; 15 min",
+            "color": ""
+          },
+          {
+            "time": "10:40",
+            "title": "Decisions and next steps",
+            "detail": "Everyone &middot; 20 min",
+            "color": ""
+          }
+        ],
+        "color": "#12b886",
+        "lineColor": "#c3fae8",
+        "titleColor": "#0b3d2e",
+        "padding": "8px 32px 12px 32px",
+        "detailColor": "#6b7280",
+        "timeWidth": "56px",
+        "fontSize": "15px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.CalloutBlock",
+      "properties": {
+        "style": "box",
+        "icon": "",
+        "title": "Before the meeting",
+        "text": "Read the roadmap draft and add your questions to the doc.",
+        "backgroundColor": "#f8f9fa",
+        "textColor": "#495057",
+        "radius": "12px",
+        "padding": "8px 32px 0px 32px",
+        "fontSize": "14px",
+        "align": "left"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 26px 24px 26px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "Accept",
+                "href": "https://example.com",
+                "backgroundColor": "#12b886",
+                "borderRadius": "8px",
+                "fontSize": "15px",
+                "align": "right",
+                "padding": "20px 6px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "Decline",
+                "href": "https://example.com",
+                "backgroundColor": "#f1f3f5",
+                "textColor": "#495057",
+                "borderRadius": "8px",
+                "fontSize": "15px",
+                "align": "left",
+                "padding": "20px 6px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Sent by #appDef.name# on behalf of the organiser.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

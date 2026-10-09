@@ -1,0 +1,13 @@
+Subject: Request REQ-1042: New laptop
+
+Request summary
+
+Request
+
+REQ-1042
+
+Title
+
+New laptop
+
+Open (https://example.com/r?id=REQ-1042)

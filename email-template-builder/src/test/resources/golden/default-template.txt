@@ -1,0 +1,11 @@
+Subject: Your request has been approved
+
+Hi Alex,
+
+Your request has been approved. Click this text to edit it.
+
+View request (https://www.example.com/requests)
+
+----------------------------------------
+
+This is an automated message.

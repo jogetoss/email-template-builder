@@ -1,0 +1,20 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.CalloutBlock",
+    "properties": {
+      "style": "dashed",
+      "icon": "",
+      "title": "",
+      "text": "#form.reset.code#",
+      "code": "true",
+      "backgroundColor": "#f5f7ff",
+      "accentColor": "#a5b4fc",
+      "titleColor": "#312e81",
+      "radius": "14px",
+      "align": "center",
+      "padding": "8px 40px",
+      "textColor": "#475569",
+      "fontSize": "14px"
+    }
+  }
+}

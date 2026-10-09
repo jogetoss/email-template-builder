@@ -1,0 +1,94 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Your tasks this week",
+    "preheader": "What changed in your tasks since last week",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#364fc7",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p><strong>Your weekly task report</strong></p><p>#date.DAY-7.d MMM# – #date.d MMM yyyy#</p>",
+        "backgroundColor": "#364fc7",
+        "color": "#ffffff",
+        "fontSize": "16px",
+        "padding": "24px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Hi #currentUser.firstName#, here are the tasks updated in the last seven days.</p>",
+        "fontSize": "15px",
+        "padding": "20px 32px 4px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DatalistTableBlock",
+      "properties": {
+        "listId": "",
+        "sampleRows": "{\"columns\": [{\"name\": \"title\", \"label\": \"Task\"}, {\"name\": \"link\", \"label\": \"Link\"}, {\"name\": \"assignee\", \"label\": \"Assignee\"}, {\"name\": \"status\", \"label\": \"Status\"}, {\"name\": \"due\", \"label\": \"Due\"}], \"rows\": [{\"title\": \"Prepare the Q4 budget\", \"link\": \"https://example.com/task/11\", \"assignee\": \"Priya Nair\", \"status\": \"In progress\", \"due\": \"3 Oct 2026\"}, {\"title\": \"Renew the SSL certificates\", \"link\": \"https://example.com/task/12\", \"assignee\": \"Sam Lee\", \"status\": \"Done\", \"due\": \"26 Sep 2026\"}, {\"title\": \"Onboard two new hires\", \"link\": \"https://example.com/task/13\", \"assignee\": \"Alex Tan\", \"status\": \"Not started\", \"due\": \"10 Oct 2026\"}]}",
+        "layout": "cards",
+        "cardTitle": "title",
+        "cardLink": "link",
+        "cardSubtitle": "assignee",
+        "columns": "status;due",
+        "cardBackground": "#f8f9ff",
+        "titleColor": "#364fc7",
+        "emptyText": "No task updates this week.",
+        "filterParams": [
+          {
+            "name": "dateModified",
+            "value": "#date.DAY-7.yyyy-MM-dd#"
+          },
+          {
+            "name": "dateModified",
+            "value": "#date.DAY-0.yyyy-MM-dd#"
+          }
+        ],
+        "sortBy": "dateModified",
+        "sortDesc": "true",
+        "padding": "12px 32px",
+        "cellMode": "text",
+        "maxRows": "20",
+        "headerBackground": "#f1f5f9",
+        "headerTextColor": "#1f2937",
+        "borderColor": "#e5e7eb",
+        "striped": "true",
+        "fontSize": "14px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Open my tasks",
+        "href": "https://example.com",
+        "backgroundColor": "#364fc7",
+        "padding": "16px 32px 28px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>You receive this report every Monday from #appDef.name#.</p>",
+        "backgroundColor": "#f1f4f8",
+        "color": "#6b7785",
+        "align": "center",
+        "fontSize": "12px",
+        "padding": "20px 32px"
+      }
+    }
+  ]
+}

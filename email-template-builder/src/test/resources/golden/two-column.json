@@ -1,0 +1,18 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {"id": "ET-2col", "name": "Two columns", "subject": "Request #form.request.id#: #form.request.title#",
+    "backgroundColor": "#eef2f5", "contentBackground": "#ffffff", "textColor": "#222222", "linkColor": "#0b5cad",
+    "fontFamily": "Helvetica, Arial, sans-serif", "width": "640px", "language": "en"},
+  "elements": [
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<h2>Request summary</h2>", "align": "center", "fontSize": "20px", "padding": "16px 32px"}},
+    {"className": "org.joget.etb.lib.RowBlock", "properties": {"backgroundColor": "#fafafa", "padding": "8px 16px"},
+      "elements": [
+        {"className": "org.joget.etb.lib.ColumnBlock", "properties": {"width": "40%"},
+          "elements": [{"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p><strong>Request</strong></p><p>#form.request.id#</p>"}}]},
+        {"className": "org.joget.etb.lib.ColumnBlock", "properties": {"width": "60%", "verticalAlign": "middle"},
+          "elements": [
+            {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p><strong>Title</strong></p><p>#form.request.title#</p>"}},
+            {"className": "org.joget.etb.lib.ButtonBlock", "properties": {"label": "Open", "href": "https://example.com/r?id=#form.request.id#", "align": "left", "padding": "8px 16px"}}]}]},
+    {"className": "org.joget.etb.lib.SpacerBlock", "properties": {"height": "16px"}}
+  ]
+}

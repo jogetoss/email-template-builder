@@ -1,0 +1,52 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.RowBlock",
+    "properties": {
+      "padding": "16px 32px",
+      "keepSideBySide": "true"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {
+          "width": "16%",
+          "verticalAlign": "middle"
+        },
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.BadgeBlock",
+            "properties": {
+              "text": "JT",
+              "shape": "circle",
+              "backgroundColor": "#1f2937",
+              "textColor": "#ffffff",
+              "fontSize": "15px",
+              "padding": "0px",
+              "size": "44px",
+              "bold": "true",
+              "spaced": "",
+              "align": "left"
+            }
+          }
+        ]
+      },
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {
+          "width": "84%",
+          "verticalAlign": "middle"
+        },
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.TextBlock",
+            "properties": {
+              "html": "<p style=\"margin:0;\"><strong>Jane Tan</strong><br><span style=\"color:#6b7280;\">Chief Operating Officer</span></p>",
+              "fontSize": "15px",
+              "padding": "0px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

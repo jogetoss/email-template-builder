@@ -1,0 +1,177 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Update on your request: #form.request.title#",
+    "preheader": "#form.request.status#: see the details inside",
+    "backgroundColor": "#f1f5f9",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#2563eb",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "16px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "28px 32px 0px 32px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "55%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>#appDef.name#</strong></p>",
+                "fontSize": "14px",
+                "color": "#475569",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "45%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.BadgeBlock",
+              "properties": {
+                "text": "&#9679;&nbsp; #form.request.status#",
+                "shape": "pill",
+                "backgroundColor": "#dcfce7",
+                "textColor": "#15803d",
+                "align": "right",
+                "padding": "0px",
+                "fontSize": "11px",
+                "size": "44px",
+                "bold": "true",
+                "spaced": "true"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><strong>Your request is moving</strong></p>",
+        "fontSize": "28px",
+        "color": "#0f172a",
+        "padding": "24px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:4px 0 0 0;\">#form.request.title#</p>",
+        "fontSize": "16px",
+        "color": "#64748b",
+        "padding": "0px 32px 20px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.StepsBlock",
+      "properties": {
+        "steps": [
+          {
+            "label": "Submitted",
+            "matches": "New, Pending"
+          },
+          {
+            "label": "In review",
+            "matches": "Reviewing, In progress"
+          },
+          {
+            "label": "Approved",
+            "matches": "Accepted"
+          },
+          {
+            "label": "Done",
+            "matches": "Closed, Completed"
+          }
+        ],
+        "current": "#form.request.status#",
+        "previewStep": "2",
+        "color": "#2563eb",
+        "mutedColor": "#e2e8f0",
+        "mutedLabelColor": "#94a3b8",
+        "padding": "0px 32px 8px 32px",
+        "lastDone": "true",
+        "doneMark": "check",
+        "fontSize": "12px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.FactsBlock",
+      "properties": {
+        "facts": [
+          {
+            "label": "Status",
+            "value": "#form.request.status#"
+          },
+          {
+            "label": "Updated by",
+            "value": "#form.request.updatedBy#"
+          },
+          {
+            "label": "Needed by",
+            "value": "#form.request.date#"
+          }
+        ],
+        "valueColor": "#0f172a",
+        "padding": "16px 32px 8px 32px",
+        "labelStyle": "caps",
+        "valueAlign": "right",
+        "labelWidth": "35%",
+        "dividers": "true",
+        "dividerColor": "#eef2f7",
+        "labelColor": "#94a3b8",
+        "fontSize": "14px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "View request",
+        "href": "https://example.com",
+        "backgroundColor": "#2563eb",
+        "borderRadius": "10px",
+        "align": "left",
+        "padding": "20px 32px 32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Automated message from #appDef.name#. Please do not reply.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

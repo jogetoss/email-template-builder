@@ -1,0 +1,106 @@
+[{
+    title : '@@etb.block.repeat@@',
+    properties : [{
+        name : 'sampleRows',
+        type : 'hidden'
+    },{
+        name : 'listId',
+        label : '@@etb.prop.listId@@',
+        description : '@@etb.prop.repeat.listId.desc@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options'
+    },{
+        name : 'fields',
+        label : '@@etb.prop.repeat.fields@@',
+        description : '@@etb.prop.repeat.fields.desc@@',
+        type : 'etbrowfields'
+    },{
+        name : 'filters',
+        label : '@@etb.prop.filters@@',
+        description : '@@etb.prop.filters.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@etb.prop.filterField@@'
+        },{
+            key : 'value',
+            label : '@@etb.prop.filterValue@@'
+        }]
+    },{
+        name : 'filterParams',
+        label : '@@etb.prop.filterParams@@',
+        description : '@@etb.prop.filterParams.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'name',
+            label : '@@etb.prop.filterParamName@@'
+        },{
+            key : 'value',
+            label : '@@etb.prop.filterParamValue@@'
+        }]
+    },{
+        name : 'sortBy',
+        label : '@@etb.prop.sortBy@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options'
+    },{
+        name : 'sortDesc',
+        label : '@@etb.prop.sortDesc@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'maxRows',
+        label : '@@etb.prop.maxRows@@',
+        description : '@@etb.prop.maxRows.desc@@',
+        type : 'textfield',
+        value : '20'
+    },{
+        name : 'emptyText',
+        label : '@@etb.prop.emptyText@@',
+        type : 'textfield',
+        value : 'Nothing to show.'
+    }]
+},{
+    title : '@@etb.prop.repeat.style@@',
+    properties : [{
+        name : 'card',
+        label : '@@etb.prop.repeat.card@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'cardBackground',
+        label : '@@etb.prop.cardBackground@@',
+        type : 'etbcolor',
+        value : '#f8fafc'
+    },{
+        name : 'borderColor',
+        label : '@@etb.prop.borderColor@@',
+        type : 'etbcolor',
+        value : '#e5e7eb'
+    },{
+        name : 'cardRadius',
+        label : '@@etb.prop.borderRadius@@',
+        type : 'textfield',
+        value : '6px'
+    },{
+        name : 'cardPadding',
+        label : '@@etb.prop.repeat.cardPadding@@',
+        description : '@@etb.prop.repeat.cardPadding.desc@@',
+        type : 'textfield',
+        value : '6px 0px'
+    },{
+        name : 'cardGap',
+        label : '@@etb.prop.cardGap@@',
+        type : 'textfield',
+        value : '12px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.repeat.padding.desc@@',
+        type : 'textfield',
+        value : '12px 24px'
+    }]
+}]

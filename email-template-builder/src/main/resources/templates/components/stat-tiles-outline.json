@@ -1,0 +1,31 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.StatTilesBlock",
+    "properties": {
+      "tiles": [
+        {
+          "icon": "",
+          "number": "+18%",
+          "caption": "Revenue",
+          "background": "#ffffff",
+          "color": "#dc2626"
+        },
+        {
+          "icon": "",
+          "number": "1,240",
+          "caption": "New customers",
+          "background": "#ffffff",
+          "color": "#111827"
+        }
+      ],
+      "borderColor": "#e5e7eb",
+      "radius": "4px",
+      "numberSize": "36px",
+      "align": "center",
+      "fontSize": "13px",
+      "tilePadding": "18px",
+      "gap": "12px",
+      "padding": "16px 32px"
+    }
+  }
+}

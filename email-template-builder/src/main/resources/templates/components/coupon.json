@@ -1,0 +1,31 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.RowBlock",
+    "properties": {
+      "padding": "12px 32px"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {
+          "backgroundColor": "#fff4e6",
+          "borderColor": "#ffd8a8",
+          "borderRadius": "10px",
+          "padding": "16px"
+        },
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.TextBlock",
+            "properties": {
+              "html": "<p style=\"margin:0;\">Use code <strong style=\"letter-spacing:2px;\">AUTUMN30</strong> at checkout</p>",
+              "align": "center",
+              "fontSize": "18px",
+              "color": "#7c2d12",
+              "padding": "0px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

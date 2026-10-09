@@ -1,0 +1,21 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.OutsideBlock",
+    "properties": {
+      "padding": "20px 0px 28px 0px"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.TextBlock",
+        "properties": {
+          "html": "<p style=\"margin:0 0 8px 0;\"><a href=\"https://example.com/help\" style=\"color:#475569;\">Help centre</a> &nbsp;&middot;&nbsp; <a href=\"https://example.com/preferences\" style=\"color:#475569;\">Email preferences</a> &nbsp;&middot;&nbsp; <a href=\"https://example.com/unsubscribe\" style=\"color:#475569;\">Unsubscribe</a></p><p style=\"margin:0;\">ACME Corporation &middot; Level 12, Menara Joget, Kuala Lumpur</p>",
+          "align": "center",
+          "fontSize": "12px",
+          "color": "#6b7785",
+          "padding": "0px 32px"
+        }
+      }
+    ]
+  },
+  "place": "last"
+}

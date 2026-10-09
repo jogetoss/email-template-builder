@@ -1,0 +1,27 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.ProgressBarsBlock",
+    "properties": {
+      "bars": [
+        {
+          "label": "Tasks done",
+          "value": "#form.project.done#/#form.project.total#",
+          "color": ""
+        },
+        {
+          "label": "Budget used",
+          "value": "#form.project.budgetUsed#",
+          "color": "#dc2626"
+        }
+      ],
+      "rounded": "",
+      "height": "10px",
+      "color": "#0f172a",
+      "padding": "16px 32px",
+      "showValue": "true",
+      "previewValue": "60",
+      "trackColor": "#e2e8f0",
+      "fontSize": "14px"
+    }
+  }
+}

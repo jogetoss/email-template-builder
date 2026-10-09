@@ -1,0 +1,21 @@
+[{
+    title : '@@etb.block.row@@',
+    properties : [{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'keepSideBySide',
+        label : '@@etb.prop.keepSideBySide@@',
+        description : '@@etb.prop.keepSideBySide.desc@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '0px'
+    }]
+}]

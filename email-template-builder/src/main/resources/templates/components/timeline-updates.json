@@ -1,0 +1,34 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.TimelineBlock",
+    "properties": {
+      "items": [
+        {
+          "time": "",
+          "title": "Investigating",
+          "detail": "#form.incident.started# &middot; We are looking into failed sign-ins.",
+          "color": ""
+        },
+        {
+          "time": "",
+          "title": "Identified",
+          "detail": "A certificate expired on the login service.",
+          "color": ""
+        },
+        {
+          "time": "",
+          "title": "Monitoring",
+          "detail": "A fix is live; we are watching the error rate.",
+          "color": ""
+        }
+      ],
+      "color": "#dc2626",
+      "filledDots": "true",
+      "lineColor": "#fecaca",
+      "fontSize": "14px",
+      "padding": "12px 32px",
+      "detailColor": "#6b7280",
+      "timeWidth": "56px"
+    }
+  }
+}

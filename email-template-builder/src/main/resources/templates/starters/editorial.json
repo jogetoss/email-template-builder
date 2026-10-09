@@ -1,0 +1,267 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Field Notes No. #form.newsletter.issue#: #form.newsletter.headline#",
+    "preheader": "This issue: #form.newsletter.headline#",
+    "backgroundColor": "#efe9df",
+    "contentBackground": "#fffdf8",
+    "textColor": "#292524",
+    "linkColor": "#b4432a",
+    "fontFamily": "Georgia, Times New Roman, serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "0px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#1c1917",
+        "thickness": "4px",
+        "padding": "36px 40px 0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:10px 0 6px 0;letter-spacing:8px;\"><strong>FIELD&nbsp;NOTES</strong></p>",
+        "align": "center",
+        "fontSize": "26px",
+        "color": "#1c1917",
+        "padding": "0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#1c1917",
+        "thickness": "1px",
+        "padding": "0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:8px 0;letter-spacing:2px;\">NO. #form.newsletter.issue# &nbsp;&middot;&nbsp; AUTUMN 2026 &nbsp;&middot;&nbsp; KUALA LUMPUR</p>",
+        "align": "center",
+        "fontSize": "11px",
+        "color": "#78716c",
+        "padding": "0px 40px 24px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:3px;\"><strong>ESSAY</strong></p>",
+        "fontSize": "12px",
+        "color": "#b4432a",
+        "padding": "8px 40px 0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:6px 0;\">#form.newsletter.headline#</p>",
+        "fontSize": "34px",
+        "color": "#1c1917",
+        "padding": "0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0 0 8px 0;\"><em>On slow tools, fast teams, and the work that happens in between.</em></p>",
+        "fontSize": "18px",
+        "color": "#57534e",
+        "padding": "0px 40px 8px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p><span style=\"float:left;font-size:58px;line-height:48px;padding:6px 8px 0 0;color:#b4432a;\">E</span>very team has a tool it quietly works around. This issue looks at why that happens, what it costs, and three teams who stopped doing it.</p><p>Write the first paragraphs of the lead story here. Keep sentences short; let the layout do the rest.</p>",
+        "fontSize": "17px",
+        "color": "#292524",
+        "padding": "8px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.CalloutBlock",
+      "properties": {
+        "style": "quote",
+        "icon": "",
+        "title": "PRIYA NAIR, HEAD OF OPERATIONS",
+        "text": "&ldquo;The fastest process is the one nobody has to think about.&rdquo;",
+        "backgroundColor": "",
+        "accentColor": "#b4432a",
+        "titleColor": "#1c1917",
+        "textColor": "#78716c",
+        "padding": "16px 40px",
+        "radius": "10px",
+        "fontSize": "14px",
+        "align": "left"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#d6d3d1",
+        "padding": "16px 40px 8px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:3px;\"><strong>IN THIS ISSUE</strong></p>",
+        "fontSize": "12px",
+        "color": "#1c1917",
+        "padding": "8px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "4px 40px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "18%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\">01</p>",
+                "fontSize": "30px",
+                "color": "#b4432a",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "82%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>The work around the work</strong><br><span style=\"color:#78716c;\">Why good teams build quiet workarounds.</span></p>",
+                "fontSize": "15px",
+                "padding": "4px 0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "4px 40px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "18%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\">02</p>",
+                "fontSize": "30px",
+                "color": "#b4432a",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "82%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Three teams, one Friday</strong><br><span style=\"color:#78716c;\">A day in the life, in three cities.</span></p>",
+                "fontSize": "15px",
+                "padding": "4px 0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "4px 40px 36px 40px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "18%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\">03</p>",
+                "fontSize": "30px",
+                "color": "#b4432a",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "82%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Notes from the field</strong><br><span style=\"color:#78716c;\">Short reads from our readers.</span></p>",
+                "fontSize": "15px",
+                "padding": "4px 0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p style=\"letter-spacing:1px;\">FIELD NOTES IS SENT TO MEMBERS OF #appDef.name#.<br><a href=\"https://example.com/unsubscribe\" style=\"color:#78716c;\">Unsubscribe</a></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

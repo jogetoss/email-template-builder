@@ -1,0 +1,22 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.ProgressBarsBlock",
+    "properties": {
+      "bars": [
+        {
+          "label": "Your profile is 75% complete",
+          "value": "75",
+          "color": ""
+        }
+      ],
+      "showValue": "",
+      "height": "14px",
+      "color": "#16a34a",
+      "trackColor": "#dcfce7",
+      "fontSize": "15px",
+      "padding": "16px 32px",
+      "previewValue": "60",
+      "rounded": "true"
+    }
+  }
+}

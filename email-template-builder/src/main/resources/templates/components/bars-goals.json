@@ -1,0 +1,31 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.ProgressBarsBlock",
+    "properties": {
+      "bars": [
+        {
+          "label": "Close support tickets",
+          "value": "86",
+          "color": "#22c55e"
+        },
+        {
+          "label": "Ship the release",
+          "value": "64",
+          "color": "#6366f1"
+        },
+        {
+          "label": "Onboard new hires",
+          "value": "40",
+          "color": "#f97316"
+        }
+      ],
+      "fontSize": "13px",
+      "padding": "16px 32px",
+      "showValue": "true",
+      "previewValue": "60",
+      "trackColor": "#e2e8f0",
+      "height": "8px",
+      "rounded": "true"
+    }
+  }
+}

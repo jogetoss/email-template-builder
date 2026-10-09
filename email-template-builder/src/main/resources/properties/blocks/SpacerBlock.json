@@ -1,0 +1,9 @@
+[{
+    title : '@@etb.block.spacer@@',
+    properties : [{
+        name : 'height',
+        label : '@@etb.prop.height@@',
+        type : 'textfield',
+        value : '24px'
+    }]
+}]

@@ -1,0 +1,122 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "We miss you, #currentUser.firstName#",
+    "preheader": "Come back this week and get a month on us",
+    "backgroundColor": "#fdf0ea",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#b5575c",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "20px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\">&nbsp;</p>",
+        "backgroundColor": "#ffd6a5",
+        "color": "#ffffff",
+        "padding": "0px 32px",
+        "fontSize": "6px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\">&nbsp;</p>",
+        "backgroundColor": "#ffadad",
+        "color": "#ffffff",
+        "padding": "0px 32px",
+        "fontSize": "6px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\">&nbsp;</p>",
+        "backgroundColor": "#f28482",
+        "color": "#ffffff",
+        "padding": "0px 32px",
+        "fontSize": "6px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:4px;\"><strong>IT'S BEEN A WHILE</strong></p>",
+        "backgroundColor": "#b5838d",
+        "color": "#ffffff",
+        "align": "center",
+        "fontSize": "12px",
+        "padding": "14px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;line-height:1.1;\"><strong>We miss you,<br>#currentUser.firstName#</strong></p>",
+        "backgroundColor": "#6d597a",
+        "color": "#ffffff",
+        "align": "center",
+        "fontSize": "38px",
+        "padding": "28px 32px 36px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>A lot has changed since you last signed in: a faster dashboard, one-click approvals and a brand-new mobile app. Come back this week and your next month is on us.</p>",
+        "align": "center",
+        "fontSize": "16px",
+        "color": "#4a4e69",
+        "padding": "32px 48px 8px 48px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<div style=\"display:inline-block;border:2px solid #f28482;border-radius:999px;padding:10px 22px;\"><p style=\"margin:0;letter-spacing:3px;\"><strong>1 MONTH FREE &middot; CODE WELCOMEBACK</strong></p></div>",
+        "align": "center",
+        "fontSize": "13px",
+        "color": "#b5575c",
+        "padding": "12px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Come back",
+        "href": "https://example.com",
+        "backgroundColor": "#6d597a",
+        "borderRadius": "999px",
+        "fontSize": "17px",
+        "padding": "16px 32px 40px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Not interested any more? <a href=\"https://example.com/unsubscribe\">Unsubscribe</a> and we won't ask again.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

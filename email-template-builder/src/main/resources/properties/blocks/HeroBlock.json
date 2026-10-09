@@ -1,0 +1,84 @@
+[{
+    title : '@@etb.block.hero@@',
+    properties : [{
+        name : 'headline',
+        label : '@@etb.prop.headline@@',
+        type : 'textfield'
+    },{
+        name : 'text',
+        label : '@@etb.prop.heroText@@',
+        type : 'textarea'
+    },{
+        name : 'buttonLabel',
+        label : '@@etb.prop.buttonLabel@@',
+        description : '@@etb.prop.buttonLabel.desc@@',
+        type : 'textfield'
+    },{
+        name : 'buttonHref',
+        label : '@@etb.prop.href@@',
+        description : '@@etb.prop.href.desc@@',
+        type : 'textfield'
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'center',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    }]
+},{
+    title : '@@etb.prop.heroBackground@@',
+    properties : [{
+        name : 'backgroundUrl',
+        label : '@@etb.prop.backgroundUrl@@',
+        description : '@@etb.prop.backgroundUrl.desc@@',
+        type : 'image',
+        appPath : '[APP_PATH]',
+        allowInput : 'true',
+        isPublic : 'true',
+        imageSize : 'width:120px; height:60px; background-size: contain; background-repeat: no-repeat; background-position: center;'
+    },{
+        name : 'backgroundPosition',
+        label : '@@etb.prop.backgroundPosition@@',
+        type : 'selectbox',
+        value : 'center center',
+        options : [{value : 'top center', label : '@@etb.position.top@@'}, {value : 'center center', label : '@@etb.position.center@@'}, {value : 'bottom center', label : '@@etb.position.bottom@@'}]
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        description : '@@etb.prop.heroBackgroundColor.desc@@',
+        type : 'etbcolor',
+        value : '#2d4a6b'
+    },{
+        name : 'textColor',
+        label : '@@etb.prop.textColor@@',
+        type : 'etbcolor',
+        value : '#ffffff'
+    },{
+        name : 'headlineSize',
+        label : '@@etb.prop.headlineSize@@',
+        type : 'textfield',
+        value : '32px'
+    },{
+        name : 'buttonColor',
+        label : '@@etb.prop.buttonColor@@',
+        type : 'etbcolor',
+        value : '#6e9f4b'
+    },{
+        name : 'buttonTextColor',
+        label : '@@etb.prop.buttonTextColor@@',
+        type : 'etbcolor',
+        value : '#ffffff'
+    },{
+        name : 'height',
+        label : '@@etb.prop.heroHeight@@',
+        description : '@@etb.prop.heroHeight.desc@@',
+        type : 'textfield',
+        value : '300px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '40px 32px'
+    }]
+}]

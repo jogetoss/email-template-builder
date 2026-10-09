@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.joget.marketplace</groupId>
+        <artifactId>email-template-builder-parent</artifactId>
+        <version>9.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>email-template-builder</artifactId>
+    <packaging>bundle</packaging>
+    <name>email-template-builder</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- the AI Composer (org.joget.etb.composer) compiles only with the ai-composer profile, which brings agent-builder's API -->
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>org/joget/etb/composer/**</exclude>
+                    </excludes>
+                    <testExcludes>
+                        <testExclude>org/joget/etb/composer/**</testExclude>
+                    </testExcludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- FelixBundleIT installs the packaged jar into Felix 7.0.5 with DX 9's felix_config.properties -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <bundle.jar>${project.build.directory}/${project.build.finalName}.jar</bundle.jar>
+                    </systemPropertyVariables>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <!-- the SPI is exported so third-party block bundles can resolve it -->
+                        <Export-Package>org.joget.etb.api</Export-Package>
+                        <Private-Package>org.joget.etb,org.joget.etb.lib,org.joget.etb.render,org.joget.etb.composer</Private-Package>
+                        <Bundle-Activator>org.joget.etb.Activator</Bundle-Activator>
+                        <!-- Do NOT list org.json / jakarta.servlet here: bnd pins the build-jar version and DX 9 exports
+                             them unversioned, so the bundle fails to resolve. DynamicImport covers them. -->
+                        <Import-Package>!*,org.joget.commons.util,org.joget.plugin.base,org.joget.plugin.property.model,org.joget.plugin.property.service,org.joget.workflow.model,org.joget.workflow.model.service,org.joget.workflow.util,org.joget.apps.app.dao,org.joget.apps.app.model,org.joget.apps.app.service,org.osgi.framework;version="1.3.0"</Import-Package>
+                        <!-- embed mjml4j + jfiveparse; the API classes are inlined via Export-Package instead -->
+                        <Embed-Dependency>*;scope=compile|runtime;inline=false;artifactId=!email-template-builder-api</Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Directory>dependency</Embed-Directory>
+                        <Embed-StripGroup>true</Embed-StripGroup>
+                        <DynamicImport-Package>*</DynamicImport-Package>
+
+                        <!-- Plugin Information -->
+                        <Joget-Name>Email Template Builder</Joget-Name>
+                        <Joget-Description>Design email templates visually in a drag-and-drop builder and send them with the Send Templated Email process tool</Joget-Description>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>messages/*.properties</exclude>
+                </excludes>
+            </resource>
+            <!-- the messages carry etb.version=${project.version}: the plugins' version comes from this POM -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>messages/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <!-- see the parent POM: on when agent-builder's API is in the local Maven repository -->
+            <id>ai-composer</id>
+            <activation>
+                <file>
+                    <exists>${user.home}/.m2/repository/org/joget/ai/agent/agent-builder-api/8.2-SNAPSHOT</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <excludes combine.self="override"/>
+                            <testExcludes combine.self="override"/>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <!-- compile only: at runtime the classes come from the installed agent-builder plugin -->
+                    <groupId>org.joget.marketplace</groupId>
+                    <artifactId>agent-builder-api-jakarta</artifactId>
+                    <version>${project.version}</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.joget.marketplace</groupId>
+            <artifactId>email-template-builder-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.digitalfondue.mjml4j</groupId>
+            <artifactId>mjml4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.joget</groupId>
+            <artifactId>wflow-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.joget</groupId>
+            <artifactId>wflow-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.joget</groupId>
+            <artifactId>wflow-plugin-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+        </dependency>
+        <!-- tests run Joget's real StringUtil (jsoup Safelist) -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.framework</artifactId>
+        </dependency>
+    </dependencies>
+</project>

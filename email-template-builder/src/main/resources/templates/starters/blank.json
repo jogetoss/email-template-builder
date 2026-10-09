@@ -1,0 +1,29 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "",
+    "preheader": "",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#1a73e8",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "0px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Start writing here, or pick a ready-made design with <strong>Templates</strong> in the toolbar.</p>",
+        "fontSize": "16px",
+        "padding": "8px 32px"
+      }
+    }
+  ]
+}

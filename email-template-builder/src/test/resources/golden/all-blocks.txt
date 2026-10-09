@@ -1,0 +1,12 @@
+Subject: Hello Alex
+
+Hi Alex, note: <b>urgent</b> & "asap"
+
+- One
+- Two & three
+
+Review REQ-1042 (mailto:approver@example.com?subject=REQ-1042)
+
+----------------------------------------
+
+Contact support (https://example.com/help).

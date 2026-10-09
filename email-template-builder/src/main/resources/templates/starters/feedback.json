@@ -1,0 +1,227 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "How did we do?",
+    "preheader": "Tell us in one tap",
+    "backgroundColor": "#fdf2f8",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#db2777",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "24px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.BadgeBlock",
+      "properties": {
+        "text": "?",
+        "shape": "circle",
+        "backgroundColor": "#fce7f3",
+        "textColor": "#db2777",
+        "size": "64px",
+        "fontSize": "30px",
+        "align": "center",
+        "padding": "36px 32px 8px 32px",
+        "bold": "true",
+        "spaced": ""
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><strong>How did we do?</strong></p>",
+        "align": "center",
+        "fontSize": "28px",
+        "color": "#831843",
+        "padding": "8px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Hi #currentUser.firstName#, how did we handle <strong>#form.request.title#</strong>? One tap is enough.</p>",
+        "align": "center",
+        "fontSize": "16px",
+        "color": "#6b7280",
+        "padding": "4px 40px 16px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 40px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "1",
+                "href": "https://example.com/feedback?score=1",
+                "backgroundColor": "#fee2e2",
+                "textColor": "#b91c1c",
+                "fontSize": "20px",
+                "borderRadius": "999px",
+                "innerPadding": "10px 14px",
+                "padding": "4px 2px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "2",
+                "href": "https://example.com/feedback?score=2",
+                "backgroundColor": "#ffedd5",
+                "textColor": "#c2410c",
+                "fontSize": "20px",
+                "borderRadius": "999px",
+                "innerPadding": "10px 14px",
+                "padding": "4px 2px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "3",
+                "href": "https://example.com/feedback?score=3",
+                "backgroundColor": "#fef9c3",
+                "textColor": "#a16207",
+                "fontSize": "20px",
+                "borderRadius": "999px",
+                "innerPadding": "10px 14px",
+                "padding": "4px 2px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "4",
+                "href": "https://example.com/feedback?score=4",
+                "backgroundColor": "#dcfce7",
+                "textColor": "#15803d",
+                "fontSize": "20px",
+                "borderRadius": "999px",
+                "innerPadding": "10px 14px",
+                "padding": "4px 2px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "5",
+                "href": "https://example.com/feedback?score=5",
+                "backgroundColor": "#fce7f3",
+                "textColor": "#be185d",
+                "fontSize": "20px",
+                "borderRadius": "999px",
+                "innerPadding": "10px 14px",
+                "padding": "4px 2px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "4px 56px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p>Not great</p>",
+                "fontSize": "12px",
+                "color": "#9ca3af",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p>Loved it</p>",
+                "align": "right",
+                "fontSize": "12px",
+                "color": "#9ca3af",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>More to say? <a href=\"https://example.com/feedback/comment\">Write us a line</a>.</p>",
+        "align": "center",
+        "fontSize": "14px",
+        "padding": "12px 40px 36px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Thank you for helping us improve #appDef.name#.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

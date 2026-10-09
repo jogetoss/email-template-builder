@@ -1,0 +1,203 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Your ticket: #form.event.name#",
+    "preheader": "#form.event.date# at #form.event.venue#. Bring this email.",
+    "backgroundColor": "#1f1b2e",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#ff5a5f",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "16px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "24px 0px 16px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><strong>#appDef.name# Events</strong></p>",
+            "align": "center",
+            "fontSize": "22px",
+            "color": "#ffffff",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "32%",
+            "backgroundColor": "#ff5a5f",
+            "verticalAlign": "middle",
+            "padding": "28px 8px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;letter-spacing:3px;\"><strong>OCT</strong></p><p style=\"margin:0;font-size:56px;line-height:1;\"><strong>16</strong></p><p style=\"margin:4px 0 0 0;letter-spacing:2px;font-size:12px;\">THURSDAY</p>",
+                "align": "center",
+                "fontSize": "14px",
+                "color": "#ffffff",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "68%",
+            "verticalAlign": "middle",
+            "padding": "24px 24px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;letter-spacing:2px;font-size:11px;color:#ff5a5f;\"><strong>YOU'RE INVITED</strong></p><p style=\"margin:6px 0;font-size:24px;line-height:1.2;\"><strong>#form.event.name#</strong></p><p style=\"margin:0;color:#6b7280;\">#form.event.time#<br>#form.event.venue#</p>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<div style=\"border-top:2px dashed #d1d5db;height:0;line-height:0;font-size:0;\">&nbsp;</div>",
+        "padding": "0px 0px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "62%",
+            "verticalAlign": "middle",
+            "padding": "20px 24px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;font-family:Courier New, Courier, monospace;letter-spacing:1px;\">ADMIT ONE<br><span style=\"color:#6b7280;\">GENERAL ADMISSION</span><br><span style=\"color:#6b7280;\">TICKET EV-2048</span></p>",
+                "fontSize": "13px",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "38%",
+            "verticalAlign": "middle",
+            "padding": "16px 24px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ImageBlock",
+              "properties": {
+                "src": "",
+                "alt": "QR code",
+                "placeholderHeight": "110px",
+                "padding": "0px",
+                "width": "110px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "4px 16px 28px 16px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "Add to calendar",
+                "href": "https://example.com",
+                "backgroundColor": "#111827",
+                "borderRadius": "8px",
+                "fontSize": "14px",
+                "padding": "4px 8px",
+                "align": "right"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "Can't make it",
+                "href": "https://example.com",
+                "backgroundColor": "#f3f4f6",
+                "textColor": "#111827",
+                "borderRadius": "8px",
+                "fontSize": "14px",
+                "padding": "4px 8px",
+                "align": "left"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><span style=\"color:#a5a3c2;\">Show this email at the door. Questions? Reply and we'll help.</span></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

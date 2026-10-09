@@ -1,0 +1,200 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Order {var.orderId} confirmed",
+    "preheader": "Thanks for your order, {var.customerName}",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#0b7285",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true",
+    "variables": [
+      {
+        "name": "orderId",
+        "description": "Order number"
+      },
+      {
+        "name": "customerName",
+        "description": "Customer's name"
+      },
+      {
+        "name": "orderDate",
+        "description": "Order date"
+      },
+      {
+        "name": "total",
+        "description": "Order total"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "24px 0px 16px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><strong>#appDef.name#</strong></p>",
+            "align": "center",
+            "fontSize": "22px",
+            "color": "#0b7285",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p><strong>Order confirmed</strong></p>",
+        "backgroundColor": "#0b7285",
+        "color": "#ffffff",
+        "fontSize": "18px",
+        "padding": "24px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Thanks for your order, {var.customerName}! Here's a summary for your records.</p>",
+        "fontSize": "16px",
+        "padding": "24px 32px 8px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "8px 32px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p><span style=\"color:#8a94a6\">Order</span><br><strong>{var.orderId}</strong></p>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p><span style=\"color:#8a94a6\">Date</span><br><strong>{var.orderDate}</strong></p>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.DatalistTableBlock",
+      "properties": {
+        "listId": "",
+        "sampleRows": "{\"columns\": [{\"name\": \"item\", \"label\": \"Item\"}, {\"name\": \"qty\", \"label\": \"Qty\"}, {\"name\": \"price\", \"label\": \"Price\"}], \"rows\": [{\"item\": \"Laptop stand\", \"qty\": \"1\", \"price\": \"USD 51.25\"}, {\"item\": \"USB-C dock\", \"qty\": \"1\", \"price\": \"USD 129.00\"}, {\"item\": \"Cable organiser\", \"qty\": \"2\", \"price\": \"USD 18.00\"}]}",
+        "columns": "item;qty;price",
+        "filters": [
+          {
+            "field": "order_id",
+            "value": "{var.orderId}"
+          }
+        ],
+        "padding": "16px 32px 0px 32px",
+        "layout": "table",
+        "cellMode": "text",
+        "maxRows": "20",
+        "emptyText": "Nothing to show.",
+        "headerBackground": "#f1f5f9",
+        "headerTextColor": "#1f2937",
+        "borderColor": "#e5e7eb",
+        "striped": "true",
+        "fontSize": "14px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "12px 42px 8px 42px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p><strong>Total</strong></p>",
+                "fontSize": "16px",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p><strong>{var.total}</strong></p>",
+                "align": "right",
+                "fontSize": "16px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "View your order",
+        "href": "https://example.com",
+        "backgroundColor": "#0b7285",
+        "padding": "16px 32px 32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Questions about your order? Reply to this email.</p><p>ACME Sdn Bhd · Level 12, Menara ACME, Kuala Lumpur</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+[{
+    title : '@@etb.block.navbar@@',
+    properties : [{
+        name : 'links',
+        label : '@@etb.prop.links@@',
+        description : '@@etb.prop.links.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'label',
+            label : '@@etb.prop.label@@'
+        },{
+            key : 'href',
+            label : '@@etb.prop.href@@'
+        }]
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'center',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    },{
+        name : 'color',
+        label : '@@etb.prop.linkColor@@',
+        type : 'etbcolor',
+        value : '#333333'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '14px'
+    },{
+        name : 'bold',
+        label : '@@etb.prop.bold@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'linkPadding',
+        label : '@@etb.prop.linkPadding@@',
+        description : '@@etb.prop.linkPadding.desc@@',
+        type : 'textfield',
+        value : '8px 12px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

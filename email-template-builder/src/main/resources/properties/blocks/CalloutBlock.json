@@ -1,0 +1,73 @@
+[{
+    title : '@@etb.block.callout@@',
+    properties : [{
+        name : 'style',
+        label : '@@etb.prop.callout.style@@',
+        type : 'selectbox',
+        value : 'box',
+        options : [{value : 'box', label : '@@etb.prop.callout.style.box@@'}, {value : 'bar', label : '@@etb.prop.callout.style.bar@@'}, {value : 'dashed', label : '@@etb.prop.callout.style.dashed@@'}, {value : 'quote', label : '@@etb.prop.callout.style.quote@@'}]
+    },{
+        name : 'icon',
+        label : '@@etb.prop.callout.icon@@',
+        description : '@@etb.prop.callout.icon.desc@@',
+        type : 'textfield'
+    },{
+        name : 'title',
+        label : '@@etb.prop.callout.title@@',
+        description : '@@etb.prop.callout.title.desc@@',
+        type : 'textfield'
+    },{
+        name : 'text',
+        label : '@@etb.prop.callout.text@@',
+        description : '@@etb.prop.callout.text.desc@@',
+        type : 'textarea'
+    },{
+        name : 'code',
+        label : '@@etb.prop.callout.code@@',
+        description : '@@etb.prop.callout.code.desc@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        type : 'etbcolor',
+        value : '#F1F5F9'
+    },{
+        name : 'accentColor',
+        label : '@@etb.prop.callout.accentColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'titleColor',
+        label : '@@etb.prop.callout.titleColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'textColor',
+        label : '@@etb.prop.textColor@@',
+        type : 'etbcolor',
+        value : '#475569'
+    },{
+        name : 'radius',
+        label : '@@etb.prop.borderRadius@@',
+        type : 'textfield',
+        value : '10px'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '14px'
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'left',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

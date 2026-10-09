@@ -1,0 +1,185 @@
+[{
+    title : '@@etb.block.datalistTable@@',
+    properties : [{
+        name : 'sampleRows',
+        type : 'hidden'
+    },{
+        name : 'listId',
+        label : '@@etb.prop.listId@@',
+        description : '@@etb.prop.listId.desc@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options'
+    },{
+        name : 'layout',
+        label : '@@etb.prop.layout@@',
+        type : 'selectbox',
+        value : 'table',
+        options : [{value : 'table', label : '@@etb.layout.table@@'}, {value : 'cards', label : '@@etb.layout.cards@@'}]
+    },{
+        name : 'cardTitle',
+        label : '@@etb.prop.cardTitle@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'cardLink',
+        label : '@@etb.prop.cardLink@@',
+        description : '@@etb.prop.cardLink.desc@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'cardSubtitle',
+        label : '@@etb.prop.cardSubtitle@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'cardBody',
+        label : '@@etb.prop.cardBody@@',
+        description : '@@etb.prop.cardBody.desc@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'columns',
+        label : '@@etb.prop.columns@@',
+        description : '@@etb.prop.columns.desc@@',
+        type : 'sortableselect',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options'
+    },{
+        name : 'filters',
+        label : '@@etb.prop.filters@@',
+        description : '@@etb.prop.filters.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@etb.prop.filterField@@'
+        },{
+            key : 'value',
+            label : '@@etb.prop.filterValue@@'
+        }]
+    },{
+        name : 'filterParams',
+        label : '@@etb.prop.filterParams@@',
+        description : '@@etb.prop.filterParams.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'name',
+            label : '@@etb.prop.filterParamName@@'
+        },{
+            key : 'value',
+            label : '@@etb.prop.filterParamValue@@'
+        }]
+    },{
+        name : 'sortBy',
+        label : '@@etb.prop.sortBy@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'listId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/columns/options'
+    },{
+        name : 'sortDesc',
+        label : '@@etb.prop.sortDesc@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'maxRows',
+        label : '@@etb.prop.maxRows@@',
+        description : '@@etb.prop.maxRows.desc@@',
+        type : 'textfield',
+        value : '20'
+    },{
+        name : 'cellMode',
+        label : '@@etb.prop.cellMode@@',
+        description : '@@etb.prop.cellMode.desc@@',
+        type : 'selectbox',
+        value : 'text',
+        options : [{value : 'text', label : '@@etb.cellMode.text@@'}, {value : 'html', label : '@@etb.cellMode.html@@'}, {value : 'raw', label : '@@etb.cellMode.raw@@'}]
+    },{
+        name : 'emptyText',
+        label : '@@etb.prop.emptyText@@',
+        type : 'textfield',
+        value : 'Nothing to show.'
+    }]
+},{
+    title : '@@etb.prop.tableStyle@@',
+    properties : [{
+        name : 'cardBackground',
+        label : '@@etb.prop.cardBackground@@',
+        type : 'etbcolor',
+        value : '#f8fafc',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'titleColor',
+        label : '@@etb.prop.titleColor@@',
+        type : 'etbcolor',
+        value : '#0b5cad',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'cardRadius',
+        label : '@@etb.prop.borderRadius@@',
+        type : 'textfield',
+        value : '6px',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'cardGap',
+        label : '@@etb.prop.cardGap@@',
+        type : 'textfield',
+        value : '12px',
+        control_field : 'layout',
+        control_value : 'cards',
+        control_use_regex : 'false'
+    },{
+        name : 'headerBackground',
+        label : '@@etb.prop.headerBackground@@',
+        type : 'etbcolor',
+        value : '#f1f5f9'
+    },{
+        name : 'headerTextColor',
+        label : '@@etb.prop.headerTextColor@@',
+        type : 'etbcolor',
+        value : '#1f2937'
+    },{
+        name : 'borderColor',
+        label : '@@etb.prop.borderColor@@',
+        type : 'etbcolor',
+        value : '#e5e7eb'
+    },{
+        name : 'striped',
+        label : '@@etb.prop.striped@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '14px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

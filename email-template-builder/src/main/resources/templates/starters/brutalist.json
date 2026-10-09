@@ -1,0 +1,139 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Scheduled maintenance: #form.maintenance.window#",
+    "preheader": "Plan around it: #form.maintenance.window#",
+    "backgroundColor": "#ffe600",
+    "contentBackground": "#ffffff",
+    "textColor": "#000000",
+    "linkColor": "#000000",
+    "fontFamily": "Helvetica, Arial, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "0px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:2px;font-family:Courier New, Courier, monospace;\"><strong>&#9632; NOTICE / IT OPERATIONS</strong></p>",
+        "fontSize": "12px",
+        "color": "#000000",
+        "padding": "32px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:8px 0;line-height:1;letter-spacing:-1px;\"><strong>SCHEDULED<br>MAINTENANCE</strong></p>",
+        "fontSize": "38px",
+        "color": "#000000",
+        "padding": "0px 32px 16px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;font-family:Courier New, Courier, monospace;letter-spacing:1px;\"><strong>#form.maintenance.window#</strong></p>",
+        "backgroundColor": "#000000",
+        "color": "#ffe600",
+        "fontSize": "17px",
+        "padding": "16px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "24px 26px 8px 26px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#ffffff;border-radius:0px;padding:16px;border:3px solid #000000;min-height:92px;\"><p style=\"margin:0;\"><strong>WHAT</strong></p><p>#form.maintenance.service# goes offline for upgrades.</p></div>",
+                "fontSize": "14px",
+                "color": "#000000",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#ffffff;border-radius:0px;padding:16px;border:3px solid #000000;min-height:92px;\"><p style=\"margin:0;\"><strong>WHO</strong></p><p>Everyone using the portal and the mobile app.</p></div>",
+                "fontSize": "14px",
+                "color": "#000000",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#ffffff;border-radius:0px;padding:16px;border:3px solid #000000;min-height:92px;\"><p style=\"margin:0;\"><strong>YOU</strong></p><p>Save your work before it starts. That's all.</p></div>",
+                "fontSize": "14px",
+                "color": "#000000",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "SEE THE STATUS PAGE",
+        "href": "https://example.com",
+        "backgroundColor": "#000000",
+        "textColor": "#ffe600",
+        "borderRadius": "0px",
+        "fontSize": "15px",
+        "align": "left",
+        "padding": "20px 32px 36px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><span style=\"color:#000000;font-family:Courier New, Courier, monospace;\">#appDef.name# IT OPERATIONS &middot; STATUS.EXAMPLE.COM</span></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

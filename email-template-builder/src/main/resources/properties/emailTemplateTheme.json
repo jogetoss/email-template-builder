@@ -1,0 +1,60 @@
+[{
+    title : '@@etb.template.theme@@',
+    properties : [{
+        name : 'backgroundColor',
+        label : '@@etb.template.backgroundColor@@',
+        type : 'etbcolor',
+        value : '#f4f4f4'
+    },{
+        name : 'contentBackground',
+        label : '@@etb.template.contentBackground@@',
+        type : 'etbcolor',
+        value : '#ffffff'
+    },{
+        name : 'textColor',
+        label : '@@etb.template.textColor@@',
+        type : 'etbcolor',
+        value : '#333333'
+    },{
+        name : 'linkColor',
+        label : '@@etb.template.linkColor@@',
+        type : 'etbcolor',
+        value : '#1a73e8'
+    },{
+        name : 'contentBorderRadius',
+        label : '@@etb.template.contentBorderRadius@@',
+        description : '@@etb.template.contentBorderRadius.desc@@',
+        type : 'textfield',
+        value : '0px'
+    },{
+        name : 'contentShadow',
+        label : '@@etb.template.contentShadow@@',
+        description : '@@etb.template.contentShadow.desc@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'fontFamily',
+        label : '@@etb.template.fontFamily@@',
+        type : 'selectbox',
+        value : 'Arial, Helvetica, sans-serif',
+        options : [
+            {value : 'Arial, Helvetica, sans-serif', label : 'Arial'},
+            {value : 'Helvetica, Arial, sans-serif', label : 'Helvetica'},
+            {value : 'Georgia, Times New Roman, serif', label : 'Georgia'},
+            {value : 'Verdana, Geneva, sans-serif', label : 'Verdana'},
+            {value : 'Tahoma, Geneva, sans-serif', label : 'Tahoma'},
+            {value : 'Trebuchet MS, Helvetica, sans-serif', label : 'Trebuchet MS'}
+        ]
+    },{
+        name : 'width',
+        label : '@@etb.template.width@@',
+        description : '@@etb.template.width.desc@@',
+        type : 'textfield',
+        value : '600px'
+    },{
+        name : 'language',
+        label : '@@etb.template.language@@',
+        type : 'textfield',
+        value : 'en'
+    }]
+}]

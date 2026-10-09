@@ -1,0 +1,83 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "New in #appDef.name#: #form.feature.name#",
+    "preheader": "#form.feature.name# is here. See what it does.",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#1971c2",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.HeroBlock",
+      "properties": {
+        "headline": "Introducing #form.feature.name#",
+        "text": "NEW · One sentence on the problem it solves and who it's for.",
+        "buttonLabel": "See it in action",
+        "buttonHref": "https://example.com",
+        "backgroundColor": "#1971c2",
+        "buttonColor": "#ffffff",
+        "buttonTextColor": "#1971c2",
+        "height": "260px",
+        "backgroundUrl": "",
+        "textColor": "#ffffff",
+        "align": "center",
+        "padding": "40px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ImageBlock",
+      "properties": {
+        "src": "",
+        "alt": "Screenshot or GIF, 1200 x 700",
+        "placeholderHeight": "260px",
+        "padding": "24px 32px 0px 32px",
+        "borderRadius": "8px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<ul><li><strong>Faster:</strong> the first benefit in a few words</li><li><strong>Simpler:</strong> the second benefit</li><li><strong>Safer:</strong> the third benefit</li></ul>",
+        "fontSize": "15px",
+        "padding": "16px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Try it now",
+        "href": "https://example.com",
+        "backgroundColor": "#1971c2",
+        "padding": "16px 32px 32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>You're receiving product updates from #appDef.name#.<br><a href=\"https://example.com/unsubscribe\">Unsubscribe</a></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

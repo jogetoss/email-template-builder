@@ -1,0 +1,18 @@
+{
+    "builder" : {
+        "options" : {
+            "rightPropertyPanel" : true
+        },
+        "callbacks" : {
+            "initBuilder" : "EmailTemplateBuilder.initBuilder",
+            "load" : "EmailTemplateBuilder.load",
+            "saveBuilderProperties" : "EmailTemplateBuilder.saveBuilderProperties"
+        }
+    },
+    "advanced_tools" : {
+        "i18n" : { "disabled" : true },
+        "permission" : { "disabled" : true },
+        "usage" : { "disabled" : true },
+        "tree_viewer" : { "disabled" : true }
+    }
+}

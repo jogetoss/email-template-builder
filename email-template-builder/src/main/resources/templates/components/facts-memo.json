@@ -1,0 +1,33 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.FactsBlock",
+    "properties": {
+      "facts": [
+        {
+          "label": "To",
+          "value": "All staff"
+        },
+        {
+          "label": "From",
+          "value": "Jane Tan, Chief Operating Officer"
+        },
+        {
+          "label": "Date",
+          "value": "#date.d MMM yyyy#"
+        },
+        {
+          "label": "Re",
+          "value": "<strong>#form.announcement.title#</strong>"
+        }
+      ],
+      "labelStyle": "mono",
+      "valueAlign": "left",
+      "labelWidth": "18%",
+      "dividers": "",
+      "labelColor": "#a8a29e",
+      "fontSize": "15px",
+      "padding": "8px 32px",
+      "dividerColor": "#eef2f7"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+[{
+    title : '@@etb.block.outside@@',
+    properties : [{
+        label : '@@etb.prop.outside.hint@@',
+        description : '@@etb.prop.outside.hint.value@@',
+        type : 'header'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.outside.padding.desc@@',
+        type : 'textfield',
+        value : '24px 0px'
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        description : '@@etb.prop.outside.bg.desc@@',
+        type : 'etbcolor'
+    }]
+}]

@@ -1,0 +1,39 @@
+[{
+    title : '@@etb.block.column@@',
+    properties : [{
+        name : 'width',
+        label : '@@etb.prop.columnWidth@@',
+        description : '@@etb.prop.columnWidth.desc@@',
+        type : 'textfield'
+    },{
+        name : 'verticalAlign',
+        label : '@@etb.prop.verticalAlign@@',
+        type : 'selectbox',
+        value : 'top',
+        options : [{value : 'top', label : '@@etb.valign.top@@'}, {value : 'middle', label : '@@etb.valign.middle@@'}, {value : 'bottom', label : '@@etb.valign.bottom@@'}]
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        type : 'etbcolor'
+    },{
+        name : 'borderColor',
+        label : '@@etb.prop.borderColor@@',
+        description : '@@etb.prop.borderColor.desc@@',
+        type : 'etbcolor'
+    },{
+        name : 'borderWidth',
+        label : '@@etb.prop.borderWidth@@',
+        type : 'textfield',
+        value : '1px'
+    },{
+        name : 'borderRadius',
+        label : '@@etb.prop.borderRadius@@',
+        type : 'textfield'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '0px'
+    }]
+}]

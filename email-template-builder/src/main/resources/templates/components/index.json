@@ -1,0 +1,210 @@
+{
+  "components": [
+    {
+      "id": "steps-status",
+      "label": "Steps: request status",
+      "category": "Progress",
+      "description": "Where a request is, from its status field: each step lists the status values that mean it."
+    },
+    {
+      "id": "steps-numbered",
+      "label": "Steps: numbered",
+      "category": "Progress",
+      "description": "Numbered steps in teal, e.g. an order's journey. Set the current step as a number or a field."
+    },
+    {
+      "id": "steps-five",
+      "label": "Steps: five stages",
+      "category": "Progress",
+      "description": "Five compact stages in violet, e.g. a hiring pipeline."
+    },
+    {
+      "id": "bars-goals",
+      "label": "Progress bars: goals",
+      "category": "Progress",
+      "description": "Three goals, each with its own colour and percentage."
+    },
+    {
+      "id": "bars-project",
+      "label": "Progress bars: from fields",
+      "category": "Progress",
+      "description": "Values from fields: a fraction (tasks done of total) and a percentage (budget used). Square ends."
+    },
+    {
+      "id": "bar-single",
+      "label": "Progress bar: one, thick",
+      "category": "Progress",
+      "description": "A single thick bar, e.g. how complete a profile or an application is."
+    },
+    {
+      "id": "header-status",
+      "label": "Header with a status pill",
+      "category": "Headers & footers",
+      "description": "The app name on the left and the status, from a field, in a pill on the right."
+    },
+    {
+      "id": "logo-above",
+      "label": "Logo above the card",
+      "category": "Headers & footers",
+      "description": "Your name or logo on the page background, above the card. Goes to the top of the email."
+    },
+    {
+      "id": "footer-simple",
+      "label": "Footer: one line",
+      "category": "Headers & footers",
+      "description": "A small centred line on the page background, under the card. Goes to the end of the email."
+    },
+    {
+      "id": "footer-links",
+      "label": "Footer: links and address",
+      "category": "Headers & footers",
+      "description": "Help and preference links, the sender's address and an unsubscribe link, under the card. Goes to the end of the email."
+    },
+    {
+      "id": "stat-tiles",
+      "label": "Stat tiles: three numbers",
+      "category": "Highlights",
+      "description": "Three big numbers in soft tiles, each with a caption. A number can be a field."
+    },
+    {
+      "id": "stat-tiles-outline",
+      "label": "Stat tiles: outlined",
+      "category": "Highlights",
+      "description": "Two bold numbers in white outlined tiles, centred."
+    },
+    {
+      "id": "facts-details",
+      "label": "Facts list: details",
+      "category": "Highlights",
+      "description": "Label and value rows from fields, labels in small capitals, values on the right. Rows with an empty value can hide."
+    },
+    {
+      "id": "facts-memo",
+      "label": "Facts list: memo header",
+      "category": "Highlights",
+      "description": "A memo's TO / FROM / DATE / RE, in monospaced labels with the value beside them, no dividers."
+    },
+    {
+      "id": "timeline-agenda",
+      "label": "Timeline: agenda",
+      "category": "Highlights",
+      "description": "Times down the left, a line with dots, and each item with its owner."
+    },
+    {
+      "id": "timeline-updates",
+      "label": "Timeline: status updates",
+      "category": "Highlights",
+      "description": "An incident or request history: filled dots, newest first, no time column."
+    },
+    {
+      "id": "callout-note",
+      "label": "Callout: note",
+      "category": "Highlights",
+      "description": "A soft grey box with a title, for a tip or something to do first."
+    },
+    {
+      "id": "callout-warning",
+      "label": "Callout: warning",
+      "category": "Highlights",
+      "description": "An amber box with a strong left edge, for something that needs attention."
+    },
+    {
+      "id": "code-box",
+      "label": "Code box",
+      "category": "Highlights",
+      "description": "A one-time code from a field, big and spaced out in a dashed box."
+    },
+    {
+      "id": "coupon",
+      "label": "Coupon",
+      "category": "Highlights",
+      "description": "An offer code on a warm panel."
+    },
+    {
+      "id": "pull-quote",
+      "label": "Pull quote",
+      "category": "Highlights",
+      "description": "A large quote with a coloured rule and the speaker's name."
+    },
+    {
+      "id": "signature",
+      "label": "Signature with initials",
+      "category": "Highlights",
+      "description": "A round initials badge beside the sender's name and role."
+    },
+    {
+      "id": "two-buttons",
+      "label": "Two buttons: accept or decline",
+      "category": "Actions",
+      "description": "A main and a secondary button side by side."
+    },
+    {
+      "id": "button-note",
+      "label": "Button with a note",
+      "category": "Actions",
+      "description": "A full-width button with a small note under it."
+    }
+  ],
+  "samples": {
+    "appDef.name": "Joget Workspace",
+    "currentUser.firstName": "Alex",
+    "form.request.title": "New laptop for the design team",
+    "form.request.status": "Approved",
+    "form.request.updatedBy": "Priya Nair",
+    "form.request.requester": "Sam Lee",
+    "form.request.amount": "USD 2,400",
+    "form.request.date": "30 Sep 2026",
+    "form.request.reason": "Replacement for a 5-year-old machine",
+    "form.reset.code": "482 913",
+    "planner.boardName": "Cloud Board",
+    "planner.date": "23 Sep 2026",
+    "planner.digest": "<p><a href=\"https://example.com\" style=\"font-weight:bold;text-decoration:none;\">Decide on an idea now</a></p><hr style=\"border:0;border-top:1px solid #999999;\"><p><strong>Admin Admin</strong> on <strong>23 Sep 2026 09:21:</strong></p><ol><li><strong>Description</strong> changed from <em>Project Moon</em> to <em>Project Moon Lunar</em></li></ol>",
+    "form.newsletter.headline": "Big news this month",
+    "form.newsletter.issue": "42",
+    "form.announcement.title": "Our new office opens on 1 November",
+    "form.event.name": "Autumn Product Day",
+    "form.event.date": "Thursday, 16 October 2026",
+    "form.event.time": "2:00 pm to 5:30 pm",
+    "form.event.venue": "Level 12, Menara Joget, Kuala Lumpur",
+    "form.incident.severity": "P1",
+    "form.incident.title": "Login failures on the customer portal",
+    "form.incident.service": "Customer Portal",
+    "form.incident.status": "Investigating",
+    "form.incident.started": "24 Sep 2026, 14:05 MYT",
+    "form.incident.impact": "About 30% of sign-ins fail",
+    "form.policy.name": "Remote Work Policy",
+    "form.policy.effectiveDate": "1 November 2026",
+    "form.policy.ackBy": "15 October 2026",
+    "form.feature.name": "Smart Approvals",
+    "currentUser.username": "alex.tan",
+    "date.EEE, d MMM yyyy": "Thu, 24 Sep 2026",
+    "date.DAY-7.d MMM": "17 Sep",
+    "date.d MMM yyyy": "24 Sep 2026",
+    "form.maintenance.window": "SAT 28 SEP 2026 · 01:00–04:00 MYT",
+    "form.maintenance.service": "The customer portal",
+    "form.build.name": "customer-portal",
+    "form.build.status": "succeeded",
+    "form.build.duration": "2m 25s",
+    "form.build.commit": "a41f9c2",
+    "form.build.message": "Fix sign-in redirect on mobile",
+    "form.build.author": "Sam Lee",
+    "form.meeting.title": "Q4 planning",
+    "form.meeting.date": "Thu, 2 Oct",
+    "form.meeting.time": "10:00–11:00",
+    "form.meeting.room": "Room Kenari, level 12",
+    "form.project.done": "14",
+    "form.project.total": "20",
+    "form.project.budgetUsed": "62%"
+  },
+  "variables": {
+    "teamName": "Cloud Operations",
+    "orderId": "SO-10482",
+    "customerName": "Alex Tan",
+    "orderDate": "24 Sep 2026",
+    "total": "USD 216.25",
+    "monthName": "September",
+    "tasksDone": "128",
+    "onTime": "94%",
+    "overdue": "12"
+  }
+}

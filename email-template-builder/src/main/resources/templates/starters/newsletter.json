@@ -1,0 +1,156 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "The Monthly Brief: #form.newsletter.headline#",
+    "preheader": "This month: #form.newsletter.headline# and more",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#1d6fb8",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "24px 0px 16px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><strong>The Monthly Brief</strong></p>",
+            "align": "center",
+            "fontSize": "22px",
+            "color": "#102a43",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.NavbarBlock",
+      "properties": {
+        "links": [
+          {
+            "label": "News",
+            "href": "https://example.com/news"
+          },
+          {
+            "label": "Events",
+            "href": "https://example.com/events"
+          },
+          {
+            "label": "People",
+            "href": "https://example.com/people"
+          },
+          {
+            "label": "Contact",
+            "href": "https://example.com/contact"
+          }
+        ],
+        "align": "center",
+        "color": "#1d6fb8",
+        "fontSize": "14px",
+        "linkPadding": "8px 12px",
+        "padding": "4px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.HeroBlock",
+      "properties": {
+        "headline": "#form.newsletter.headline#",
+        "text": "What's new, what's coming, and what to read first.",
+        "buttonLabel": "Read the lead story",
+        "buttonHref": "https://example.com",
+        "backgroundColor": "#102a43",
+        "height": "260px",
+        "backgroundUrl": "",
+        "textColor": "#ffffff",
+        "align": "center",
+        "padding": "40px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "16px 16px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ImageBlock",
+              "properties": {
+                "src": "",
+                "alt": "Article image",
+                "placeholderHeight": "140px",
+                "padding": "8px 16px",
+                "borderRadius": "6px"
+              }
+            },
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p><strong>First story title</strong></p><p>Two lines that make the reader want more.</p><p><a href=\"https://example.com\">Read more</a></p>",
+                "fontSize": "14px",
+                "padding": "0px 16px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ImageBlock",
+              "properties": {
+                "src": "",
+                "alt": "Article image",
+                "placeholderHeight": "140px",
+                "padding": "8px 16px",
+                "borderRadius": "6px"
+              }
+            },
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p><strong>Second story title</strong></p><p>Two lines that make the reader want more.</p><p><a href=\"https://example.com\">Read more</a></p>",
+                "fontSize": "14px",
+                "padding": "0px 16px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Issue #form.newsletter.issue# · You receive this newsletter as a member of #appDef.name#.<br><a href=\"https://example.com/unsubscribe\">Unsubscribe</a> · <a href=\"https://example.com/preferences\">Preferences</a></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

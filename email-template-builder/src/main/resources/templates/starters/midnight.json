@@ -1,0 +1,170 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Meet Aurora: #form.feature.name#",
+    "preheader": "Faster, smarter, and ready today.",
+    "backgroundColor": "#0b0d17",
+    "contentBackground": "#141829",
+    "textColor": "#e6e8f2",
+    "linkColor": "#8b7bff",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "18px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.BadgeBlock",
+      "properties": {
+        "text": "&#9679;&nbsp; NEW RELEASE",
+        "shape": "pill",
+        "backgroundColor": "#2a2350",
+        "textColor": "#c4b5fd",
+        "align": "center",
+        "padding": "40px 32px 8px 32px",
+        "fontSize": "11px",
+        "size": "44px",
+        "bold": "true",
+        "spaced": "true"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><strong>Meet Aurora<span style=\"color:#7c5cff;\">.</span></strong></p>",
+        "align": "center",
+        "fontSize": "44px",
+        "color": "#ffffff",
+        "padding": "8px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>#form.feature.name# rebuilt from the ground up: twice as fast, half the clicks.</p>",
+        "align": "center",
+        "fontSize": "17px",
+        "color": "#9aa0b8",
+        "padding": "8px 56px 16px 56px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Take the tour",
+        "href": "https://example.com",
+        "backgroundColor": "#7c5cff",
+        "textColor": "#ffffff",
+        "borderRadius": "10px",
+        "fontSize": "16px",
+        "padding": "8px 32px 32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 26px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#1b2040;border-radius:14px;padding:20px;border:1px solid #2a3160;min-height:96px;\"><p style=\"font-size:12px;letter-spacing:2px;margin:0;color:#a78bfa;\"><strong>SPEED</strong></p><p><strong style=\"color:#ffffff;\">2&times; faster</strong><br>Pages open before you finish the click.</p></div>",
+                "fontSize": "14px",
+                "color": "#9aa0b8",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#1b2040;border-radius:14px;padding:20px;border:1px solid #2a3160;min-height:96px;\"><p style=\"font-size:12px;letter-spacing:2px;margin:0;color:#a78bfa;\"><strong>EASE</strong></p><p><strong style=\"color:#ffffff;\">Smart defaults</strong><br>It fills in what it can, you check the rest.</p></div>",
+                "fontSize": "14px",
+                "color": "#9aa0b8",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 26px 32px 26px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#10233a;border-radius:14px;padding:20px;border:1px solid #16415c;min-height:96px;\"><p style=\"margin:0;\"><strong style=\"font-size:34px;color:#22d3ee;\">0</strong></p><p>New tools to learn. It works the way you already do.</p></div>",
+                "fontSize": "14px",
+                "color": "#9aa0b8",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#2a1630;border-radius:14px;padding:20px;border:1px solid #4c1d4f;min-height:96px;\"><p style=\"margin:0;\"><strong style=\"font-size:34px;color:#f472b6;\">24/7</strong></p><p>Help from a real person, whenever you need it.</p></div>",
+                "fontSize": "14px",
+                "color": "#9aa0b8",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><span style=\"color:#6b7089;\">You're receiving product news from #appDef.name#. <a href=\"https://example.com/unsubscribe\" style=\"color:#8b7bff;\">Unsubscribe</a></span></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

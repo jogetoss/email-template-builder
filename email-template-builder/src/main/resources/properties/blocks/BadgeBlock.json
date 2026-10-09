@@ -1,0 +1,62 @@
+[{
+    title : '@@etb.block.badge@@',
+    properties : [{
+        name : 'text',
+        label : '@@etb.prop.badge.text@@',
+        description : '@@etb.prop.badge.text.desc@@',
+        type : 'textfield',
+        value : '&#9679;&nbsp; Approved'
+    },{
+        name : 'shape',
+        label : '@@etb.prop.badge.shape@@',
+        type : 'selectbox',
+        value : 'pill',
+        options : [{value : 'pill', label : '@@etb.prop.badge.shape.pill@@'}, {value : 'circle', label : '@@etb.prop.badge.shape.circle@@'}, {value : 'rounded', label : '@@etb.prop.badge.shape.rounded@@'}]
+    },{
+        name : 'size',
+        label : '@@etb.prop.badge.size@@',
+        description : '@@etb.prop.badge.size.desc@@',
+        type : 'textfield',
+        value : '44px'
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor',
+        value : '#DCFCE7'
+    },{
+        name : 'textColor',
+        label : '@@etb.prop.textColor@@',
+        type : 'etbcolor',
+        value : '#15803D'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '11px'
+    },{
+        name : 'bold',
+        label : '@@etb.prop.bold@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'spaced',
+        label : '@@etb.prop.badge.spaced@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'left',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

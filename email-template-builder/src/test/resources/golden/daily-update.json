@@ -1,0 +1,20 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {"id": "ET-daily", "name": "Daily Update", "subject": "Daily Update for #planner.boardName#",
+    "preheader": "What changed on #planner.boardName# today",
+    "backgroundColor": "#f4f4f4", "contentBackground": "#ffffff", "contentBorderRadius": "8px", "contentShadow": "true",
+    "textColor": "#333333", "linkColor": "#0b5cad", "fontFamily": "Arial, Helvetica, sans-serif", "width": "600px", "language": "en"},
+  "elements": [
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p>Daily Update for #planner.boardName#</p>", "align": "center", "fontSize": "20px",
+      "color": "#ffffff", "backgroundColor": "#0b5641", "padding": "32px 32px"}},
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p><strong>#planner.date#</strong></p>", "align": "center", "fontSize": "20px", "padding": "16px 32px 4px 32px"}},
+    {"className": "org.joget.etb.lib.RowBlock", "properties": {"padding": "0px 24px"},
+      "elements": [
+        {"className": "org.joget.etb.lib.ColumnBlock", "properties": {"backgroundColor": "#f9f9f9", "borderColor": "#dddddd", "borderWidth": "1px", "borderRadius": "4px", "padding": "12px"},
+          "elements": [{"className": "org.joget.etb.lib.HtmlBlock", "properties": {"html": "#planner.digest#", "fontSize": "14px", "padding": "4px"}}]}]},
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p>Please visit the <a href=\"https://example.com/planner\">Planner</a> app for more details.</p><p>Thanks.</p>",
+      "fontSize": "16px", "padding": "16px 32px"}},
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p>Powered By Joget</p>", "align": "center", "fontSize": "13px",
+      "color": "#666666", "backgroundColor": "#eeeeee", "padding": "16px 32px"}}
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.RowBlock",
+    "properties": {
+      "padding": "28px 32px 12px 32px",
+      "keepSideBySide": "true"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {
+          "width": "55%",
+          "verticalAlign": "middle"
+        },
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.TextBlock",
+            "properties": {
+              "html": "<p style=\"margin:0;\"><strong>#appDef.name#</strong></p>",
+              "fontSize": "14px",
+              "color": "#475569",
+              "padding": "0px"
+            }
+          }
+        ]
+      },
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {
+          "width": "45%",
+          "verticalAlign": "middle"
+        },
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.BadgeBlock",
+            "properties": {
+              "text": "&#9679;&nbsp; #form.request.status#",
+              "shape": "pill",
+              "backgroundColor": "#dcfce7",
+              "textColor": "#15803d",
+              "align": "right",
+              "padding": "0px",
+              "fontSize": "11px",
+              "size": "44px",
+              "bold": "true",
+              "spaced": "true"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

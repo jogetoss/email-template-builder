@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.joget.marketplace</groupId>
+    <artifactId>email-template-builder-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>9.0-SNAPSHOT</version>
+    <name>email-template-builder-parent</name>
+    <description>Email Template Builder for Joget DX 9: blocks emit MJML, compiled by embedded mjml4j.</description>
+
+    <modules>
+        <module>email-template-builder-api</module>
+        <module>email-template-builder</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- DX 9 core is built with release 17; mjml4j requires 17 -->
+        <maven.compiler.release>17</maven.compiler.release>
+        <joget.version>9.0-SNAPSHOT</joget.version>
+        <!-- the agent-builder API the optional AI Composer compiles against (ai-composer profile). Maven can't use a property in a
+             profile activation, so the activation paths in this POM and email-template-builder/pom.xml name this version too -->
+        <agent-builder.version>8.2-SNAPSHOT</agent-builder.version>
+    </properties>
+
+    <profiles>
+        <!--
+          AI Composer support (needs agent-builder's API in the local Maven repository: build agent-builder first).
+          On automatically when it is there; off otherwise, and the plugin builds without the composer classes.
+          Force it with -Pai-composer, or leave it out with -P!ai-composer.
+        -->
+        <profile>
+            <id>ai-composer</id>
+            <activation>
+                <file>
+                    <exists>${user.home}/.m2/repository/org/joget/ai/agent/agent-builder-api/8.2-SNAPSHOT</exists>
+                </file>
+            </activation>
+            <modules>
+                <module>agent-builder-api-jakarta</module>
+            </modules>
+        </profile>
+    </profiles>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.22.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>5.1.8</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.joget</groupId>
+                <artifactId>wflow-core</artifactId>
+                <version>${joget.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.joget</groupId>
+                <artifactId>wflow-commons</artifactId>
+                <version>${joget.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.joget</groupId>
+                <artifactId>wflow-plugin-base</artifactId>
+                <version>${joget.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.0.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.15.3</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ch.digitalfondue.mjml4j</groupId>
+                <artifactId>mjml4j</artifactId>
+                <version>1.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.2</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.framework</artifactId>
+                <version>7.0.5</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

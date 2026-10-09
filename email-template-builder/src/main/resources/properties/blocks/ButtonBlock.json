@@ -1,0 +1,53 @@
+[{
+    title : '@@etb.block.button@@',
+    properties : [{
+        name : 'label',
+        label : '@@etb.prop.label@@',
+        type : 'textfield',
+        required : 'True'
+    },{
+        name : 'href',
+        label : '@@etb.prop.href@@',
+        description : '@@etb.prop.href.desc@@',
+        type : 'textfield',
+        required : 'True'
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        type : 'etbcolor',
+        value : '#6e9f4b'
+    },{
+        name : 'textColor',
+        label : '@@etb.prop.textColor@@',
+        type : 'etbcolor',
+        value : '#ffffff'
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'center',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '16px'
+    },{
+        name : 'borderRadius',
+        label : '@@etb.prop.borderRadius@@',
+        type : 'textfield',
+        value : '4px'
+    },{
+        name : 'innerPadding',
+        label : '@@etb.prop.button.innerPadding@@',
+        description : '@@etb.prop.button.innerPadding.desc@@',
+        type : 'textfield',
+        value : '12px 24px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '12px 32px'
+    }]
+}]

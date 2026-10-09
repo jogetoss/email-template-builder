@@ -147,6 +147,7 @@ csx
 AppPackages/
 
 # Others
+sql/
 *.Cache
 ClientBin/
 [Ss]tyle[Cc]op.*
@@ -156,7 +157,6 @@ ClientBin/
 *.[Pp]ublish.xml
 *.pfx
 *.publishsettings
-.DS_Store
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -213,3 +213,26 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+#################
+## Joget
+#################
+
+wflow-consoleweb/src/main/webapp/wro/
+
+#################
+## This project
+#################
+
+# Felix test cache lives under target/ (ignored above)
+
+# old api-builder copy kept aside during setup; not part of the build
+legacy-skeleton/
+
+# local generators and dev scripts, not published
+tools/
+__pycache__/
+
+# local tooling
+.claude/
+.vscode/

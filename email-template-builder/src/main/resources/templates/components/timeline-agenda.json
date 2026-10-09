@@ -1,0 +1,39 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.TimelineBlock",
+    "properties": {
+      "items": [
+        {
+          "time": "10:00",
+          "title": "Welcome and goals",
+          "detail": "Priya &middot; 5 min",
+          "color": ""
+        },
+        {
+          "time": "10:05",
+          "title": "Q4 roadmap",
+          "detail": "Sam &middot; 20 min",
+          "color": ""
+        },
+        {
+          "time": "10:25",
+          "title": "Customer feedback",
+          "detail": "Alex &middot; 15 min",
+          "color": ""
+        },
+        {
+          "time": "10:40",
+          "title": "Decisions and next steps",
+          "detail": "Everyone &middot; 20 min",
+          "color": ""
+        }
+      ],
+      "color": "#12b886",
+      "lineColor": "#c3fae8",
+      "padding": "12px 32px",
+      "detailColor": "#6b7280",
+      "timeWidth": "56px",
+      "fontSize": "15px"
+    }
+  }
+}

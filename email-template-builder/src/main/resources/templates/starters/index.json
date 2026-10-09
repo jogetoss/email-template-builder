@@ -1,0 +1,228 @@
+{
+  "starters": [
+    {
+      "id": "blank",
+      "label": "Blank",
+      "category": "Basic",
+      "description": "An empty email with one text block."
+    },
+    {
+      "id": "notification",
+      "label": "Notification",
+      "category": "IT & workflow",
+      "description": "A status tracker: where the request is, a status pill and its details."
+    },
+    {
+      "id": "approval",
+      "label": "Approval request",
+      "category": "IT & workflow",
+      "description": "A decision card: who asks, the amount in large type, the facts and two pill buttons."
+    },
+    {
+      "id": "password-reset",
+      "label": "Password reset / code",
+      "category": "IT & workflow",
+      "description": "A narrow security card: a masked-password badge and a spaced-out code in a dashed box."
+    },
+    {
+      "id": "digest",
+      "label": "Daily digest",
+      "category": "IT & workflow",
+      "description": "A card per update from a datalist, filtered to yesterday and today."
+    },
+    {
+      "id": "alert",
+      "label": "Alert / incident",
+      "category": "IT & workflow",
+      "description": "An incident log: a red stripe, a severity pill, the facts and a timeline of updates."
+    },
+    {
+      "id": "newsletter",
+      "label": "Newsletter",
+      "category": "Newsletter",
+      "description": "Masthead outside the card, a navbar, a hero lead story and two article cards."
+    },
+    {
+      "id": "announcement",
+      "label": "Announcement",
+      "category": "Corporate",
+      "description": "A company memo: a TO / FROM / DATE / RE header, a heavy rule and an initialled signature."
+    },
+    {
+      "id": "promo",
+      "label": "Promotion",
+      "category": "Marketing",
+      "description": "A hero with the offer, a coupon code, three benefits and an unsubscribe footer."
+    },
+    {
+      "id": "policy",
+      "label": "HR policy update",
+      "category": "Corporate",
+      "description": "A change checklist: numbered change cards and an acknowledgement box."
+    },
+    {
+      "id": "event",
+      "label": "Event invitation",
+      "category": "Corporate",
+      "description": "A poster: an oversized typographic date on a colour block, three facts and a black button."
+    },
+    {
+      "id": "feature",
+      "label": "Feature announcement",
+      "category": "Marketing",
+      "description": "A hero introducing the feature, a screenshot, three benefits and a call to action."
+    },
+    {
+      "id": "welcome",
+      "label": "Welcome / onboarding",
+      "category": "Corporate",
+      "description": "Logo above the card, a welcome banner, login details and a support footer."
+    },
+    {
+      "id": "receipt",
+      "label": "Receipt / order confirmation",
+      "category": "Corporate",
+      "description": "Order details and its line items from a datalist, with a total."
+    },
+    {
+      "id": "tasks",
+      "label": "Weekly task report",
+      "category": "IT & workflow",
+      "description": "The week's tasks from a datalist as cards, with status and due date."
+    },
+    {
+      "id": "feedback",
+      "label": "Feedback request",
+      "category": "Corporate",
+      "description": "One question and a 1 to 5 scale to tap, in soft pastel cards."
+    },
+    {
+      "id": "midnight",
+      "label": "Midnight launch",
+      "category": "Marketing",
+      "description": "A dark, high-contrast launch: a glowing badge, a huge headline and a bento grid of features."
+    },
+    {
+      "id": "editorial",
+      "label": "Editorial",
+      "category": "Newsletter",
+      "description": "A magazine layout: serif masthead between rules, a drop cap, a pull quote and a numbered contents list."
+    },
+    {
+      "id": "kpi",
+      "label": "Month at a glance",
+      "category": "IT & workflow",
+      "description": "A report card: three big-number tiles, progress bars and highlights."
+    },
+    {
+      "id": "ticket",
+      "label": "Event ticket",
+      "category": "Corporate",
+      "description": "An invitation as a ticket: a date stub, a dashed perforation and an admit-one line."
+    },
+    {
+      "id": "brutalist",
+      "label": "Bold notice",
+      "category": "IT & workflow",
+      "description": "A loud, no-nonsense notice: yellow page, heavy type, a black time band and bordered tiles."
+    },
+    {
+      "id": "build",
+      "label": "Build report",
+      "category": "IT & workflow",
+      "description": "A terminal: green monospace commands, passed and failed steps, and the commit that triggered it."
+    },
+    {
+      "id": "comeback",
+      "label": "We miss you",
+      "category": "Marketing",
+      "description": "Sunset colour bands that fade from peach to plum, a warm message and a comeback offer."
+    },
+    {
+      "id": "swiss",
+      "label": "Quarterly update",
+      "category": "Corporate",
+      "description": "A Swiss grid: huge numerals, one red accent, thin rules and strict left alignment."
+    },
+    {
+      "id": "achievement",
+      "label": "Achievement",
+      "category": "Corporate",
+      "description": "A playful badge 'sticker', pastel bubbles for the stats and a pill button to share."
+    },
+    {
+      "id": "vip",
+      "label": "VIP invitation",
+      "category": "Marketing",
+      "description": "Black and gold: serif type, thin gold rules, wide letter-spacing and a single gold button."
+    },
+    {
+      "id": "agenda",
+      "label": "Meeting agenda",
+      "category": "IT & workflow",
+      "description": "A timeline: times down the left, a line with dots, and each item with its owner."
+    }
+  ],
+  "samples": {
+    "appDef.name": "Joget Workspace",
+    "currentUser.firstName": "Alex",
+    "form.request.title": "New laptop for the design team",
+    "form.request.status": "Approved",
+    "form.request.updatedBy": "Priya Nair",
+    "form.request.requester": "Sam Lee",
+    "form.request.amount": "USD 2,400",
+    "form.request.date": "30 Sep 2026",
+    "form.request.reason": "Replacement for a 5-year-old machine",
+    "form.reset.code": "482 913",
+    "planner.boardName": "Cloud Board",
+    "planner.date": "23 Sep 2026",
+    "planner.digest": "<p><a href=\"https://example.com\" style=\"font-weight:bold;text-decoration:none;\">Decide on an idea now</a></p><hr style=\"border:0;border-top:1px solid #999999;\"><p><strong>Admin Admin</strong> on <strong>23 Sep 2026 09:21:</strong></p><ol><li><strong>Description</strong> changed from <em>Project Moon</em> to <em>Project Moon Lunar</em></li></ol>",
+    "form.newsletter.headline": "Big news this month",
+    "form.newsletter.issue": "42",
+    "form.announcement.title": "Our new office opens on 1 November",
+    "form.event.name": "Autumn Product Day",
+    "form.event.date": "Thursday, 16 October 2026",
+    "form.event.time": "2:00 pm to 5:30 pm",
+    "form.event.venue": "Level 12, Menara Joget, Kuala Lumpur",
+    "form.incident.severity": "P1",
+    "form.incident.title": "Login failures on the customer portal",
+    "form.incident.service": "Customer Portal",
+    "form.incident.status": "Investigating",
+    "form.incident.started": "24 Sep 2026, 14:05 MYT",
+    "form.incident.impact": "About 30% of sign-ins fail",
+    "form.policy.name": "Remote Work Policy",
+    "form.policy.effectiveDate": "1 November 2026",
+    "form.policy.ackBy": "15 October 2026",
+    "form.feature.name": "Smart Approvals",
+    "currentUser.username": "alex.tan",
+    "date.EEE, d MMM yyyy": "Thu, 24 Sep 2026",
+    "date.DAY-7.d MMM": "17 Sep",
+    "date.d MMM yyyy": "24 Sep 2026",
+    "form.maintenance.window": "SAT 28 SEP 2026 · 01:00–04:00 MYT",
+    "form.maintenance.service": "The customer portal",
+    "form.build.name": "customer-portal",
+    "form.build.status": "succeeded",
+    "form.build.duration": "2m 25s",
+    "form.build.commit": "a41f9c2",
+    "form.build.message": "Fix sign-in redirect on mobile",
+    "form.build.author": "Sam Lee",
+    "form.meeting.title": "Q4 planning",
+    "form.meeting.date": "Thu, 2 Oct",
+    "form.meeting.time": "10:00–11:00",
+    "form.meeting.room": "Room Kenari, level 12",
+    "form.project.done": "14",
+    "form.project.total": "20",
+    "form.project.budgetUsed": "62%"
+  },
+  "variables": {
+    "teamName": "Cloud Operations",
+    "orderId": "SO-10482",
+    "customerName": "Alex Tan",
+    "orderDate": "24 Sep 2026",
+    "total": "USD 216.25",
+    "monthName": "September",
+    "tasksDone": "128",
+    "onTime": "94%",
+    "overdue": "12"
+  }
+}

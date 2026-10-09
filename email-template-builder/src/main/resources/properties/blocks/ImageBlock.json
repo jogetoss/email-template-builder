@@ -1,0 +1,50 @@
+[{
+    title : '@@etb.block.image@@',
+    properties : [{
+        name : 'src',
+        label : '@@etb.prop.src@@',
+        description : '@@etb.prop.src.desc@@',
+        type : 'image',
+        appPath : '[APP_PATH]',
+        allowInput : 'true',
+        isPublic : 'true',
+        imageSize : 'width:120px; height:60px; background-size: contain; background-repeat: no-repeat; background-position: center;'
+    },{
+        name : 'alt',
+        label : '@@etb.prop.alt@@',
+        description : '@@etb.prop.alt.desc@@',
+        type : 'textfield',
+        required : 'True'
+    },{
+        name : 'href',
+        label : '@@etb.prop.imageHref@@',
+        type : 'textfield'
+    },{
+        name : 'width',
+        label : '@@etb.prop.imageWidth@@',
+        description : '@@etb.prop.imageWidth.desc@@',
+        type : 'textfield'
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'center',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    },{
+        name : 'borderRadius',
+        label : '@@etb.prop.borderRadius@@',
+        type : 'textfield'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    },{
+        name : 'placeholderHeight',
+        label : '@@etb.prop.placeholderHeight@@',
+        description : '@@etb.prop.placeholderHeight.desc@@',
+        type : 'textfield',
+        value : '200px'
+    }]
+}]

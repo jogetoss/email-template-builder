@@ -1,0 +1,21 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.OutsideBlock",
+    "properties": {
+      "padding": "20px 0px 28px 0px"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.TextBlock",
+        "properties": {
+          "html": "<p>Automated message from #appDef.name#. Please do not reply.</p>",
+          "align": "center",
+          "fontSize": "12px",
+          "color": "#6b7785",
+          "padding": "0px 32px"
+        }
+      }
+    ]
+  },
+  "place": "last"
+}

@@ -1,0 +1,145 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Welcome to #appDef.name#, #currentUser.firstName#",
+    "preheader": "Your account is ready",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#2e86de",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "24px 0px 16px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><strong>#appDef.name#</strong></p>",
+            "align": "center",
+            "fontSize": "22px",
+            "color": "#2e86de",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.ImageBlock",
+      "properties": {
+        "src": "",
+        "alt": "Welcome banner, 1200 x 300",
+        "placeholderHeight": "150px",
+        "padding": "0px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p><strong>Welcome to #appDef.name#!</strong></p>",
+        "fontSize": "28px",
+        "padding": "32px 64px 8px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Hi #currentUser.firstName#,<br>Your account is ready. You can start submitting requests and collaborating with your team today.</p>",
+        "fontSize": "16px",
+        "padding": "8px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#e5e7eb",
+        "padding": "16px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p><strong>Here's your login information:</strong></p>",
+        "fontSize": "15px",
+        "padding": "0px 64px 4px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.FactsBlock",
+      "properties": {
+        "facts": [
+          {
+            "label": "Sign-in page",
+            "value": "https://apps.example.com"
+          },
+          {
+            "label": "Username",
+            "value": "#currentUser.username#"
+          }
+        ],
+        "labelStyle": "plain",
+        "valueAlign": "left",
+        "labelWidth": "30%",
+        "dividers": "",
+        "labelColor": "#8a94a6",
+        "fontSize": "13px",
+        "padding": "4px 64px",
+        "dividerColor": "#eef2f7"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Log in now",
+        "href": "https://example.com",
+        "backgroundColor": "#16b86b",
+        "align": "left",
+        "padding": "24px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#e5e7eb",
+        "padding": "0px 64px 16px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Thanks for joining.<br>– The #appDef.name# team</p>",
+        "fontSize": "15px",
+        "padding": "0px 64px 32px 64px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><strong>Questions?</strong><br>Reply to this email or contact <a href=\"mailto:support@example.com\">support@example.com</a>.</p><p>ACME Sdn Bhd · Level 12, Menara ACME, Kuala Lumpur</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

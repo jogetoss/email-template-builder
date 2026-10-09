@@ -1,0 +1,132 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "You're invited: #form.event.name#",
+    "preheader": "#form.event.date# at #form.event.venue#",
+    "backgroundColor": "#1b1b1b",
+    "contentBackground": "#ff6b35",
+    "textColor": "#1b1b1b",
+    "linkColor": "#1b1b1b",
+    "fontFamily": "Helvetica, Arial, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "0px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:4px;\"><strong>YOU'RE INVITED</strong></p>",
+        "fontSize": "13px",
+        "color": "#1b1b1b",
+        "padding": "40px 36px 0px 36px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;line-height:0.9;letter-spacing:-3px;\"><strong>16.10</strong></p>",
+        "fontSize": "96px",
+        "color": "#ffffff",
+        "padding": "12px 36px 0px 36px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:8px 0 0 0;line-height:1.1;\"><strong>#form.event.name#</strong></p>",
+        "fontSize": "34px",
+        "color": "#1b1b1b",
+        "padding": "0px 36px 24px 36px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 30px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"border-top:2px solid #1b1b1b;padding-top:8px;\"><p style=\"margin:0;font-size:11px;letter-spacing:2px;\"><strong>WHEN</strong></p><p style=\"margin:4px 0 0 0;\">#form.event.time#</p></div>",
+                "fontSize": "14px",
+                "color": "#1b1b1b",
+                "padding": "0px 6px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"border-top:2px solid #1b1b1b;padding-top:8px;\"><p style=\"margin:0;font-size:11px;letter-spacing:2px;\"><strong>WHERE</strong></p><p style=\"margin:4px 0 0 0;\">#form.event.venue#</p></div>",
+                "fontSize": "14px",
+                "color": "#1b1b1b",
+                "padding": "0px 6px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"border-top:2px solid #1b1b1b;padding-top:8px;\"><p style=\"margin:0;font-size:11px;letter-spacing:2px;\"><strong>WHO</strong></p><p style=\"margin:4px 0 0 0;\">Everyone in the team</p></div>",
+                "fontSize": "14px",
+                "color": "#1b1b1b",
+                "padding": "0px 6px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "RSVP now",
+        "href": "https://example.com",
+        "backgroundColor": "#1b1b1b",
+        "textColor": "#ffffff",
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "align": "left",
+        "padding": "28px 36px 40px 36px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><span style=\"color:#a3a3a3;\">#appDef.name# &middot; Events. Can't make it? Just reply.</span></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

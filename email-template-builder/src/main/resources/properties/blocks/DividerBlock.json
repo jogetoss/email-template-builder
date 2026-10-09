@@ -1,0 +1,25 @@
+[{
+    title : '@@etb.block.divider@@',
+    properties : [{
+        name : 'color',
+        label : '@@etb.prop.color@@',
+        type : 'etbcolor',
+        value : '#dddddd'
+    },{
+        name : 'thickness',
+        label : '@@etb.prop.thickness@@',
+        type : 'textfield',
+        value : '1px'
+    },{
+        name : 'width',
+        label : '@@etb.prop.widthPercent@@',
+        type : 'textfield',
+        value : '100%'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '12px 32px'
+    }]
+}]

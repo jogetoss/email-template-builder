@@ -1,0 +1,243 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Policy update: #form.policy.name#",
+    "preheader": "What changes on #form.policy.effectiveDate# and what you need to do",
+    "backgroundColor": "#eef2ff",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#4338ca",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "16px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><span style=\"display:inline-block;background-color:#e0e7ff;color:#3730a3;border-radius:999px;padding:5px 12px;font-size:11px;letter-spacing:1px;font-weight:bold;\">POLICY UPDATE</span>&nbsp; <span style=\"display:inline-block;background-color:#f1f5f9;color:#475569;border-radius:999px;padding:5px 12px;font-size:11px;letter-spacing:1px;font-weight:bold;\">FROM #form.policy.effectiveDate#</span></p>",
+        "padding": "32px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><strong>What's changing in the #form.policy.name#</strong></p>",
+        "fontSize": "26px",
+        "color": "#1e1b4b",
+        "padding": "16px 32px 4px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Hi #currentUser.firstName#, three things change. Each takes a minute to read.</p>",
+        "fontSize": "15px",
+        "color": "#64748b",
+        "padding": "0px 32px 12px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "10px 32px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "14%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.BadgeBlock",
+              "properties": {
+                "text": "1",
+                "shape": "circle",
+                "backgroundColor": "#4338ca",
+                "textColor": "#ffffff",
+                "size": "36px",
+                "fontSize": "15px",
+                "padding": "0px",
+                "bold": "true",
+                "spaced": "",
+                "align": "left"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "86%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Core hours move to 10:00 to 16:00</strong><br><span style=\"color:#64748b;\">Outside core hours, work when it suits you.</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "10px 32px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "14%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.BadgeBlock",
+              "properties": {
+                "text": "2",
+                "shape": "circle",
+                "backgroundColor": "#4338ca",
+                "textColor": "#ffffff",
+                "size": "36px",
+                "fontSize": "15px",
+                "padding": "0px",
+                "bold": "true",
+                "spaced": "",
+                "align": "left"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "86%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Two remote days a week</strong><br><span style=\"color:#64748b;\">Agree the days with your manager each month.</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "10px 32px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "14%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.BadgeBlock",
+              "properties": {
+                "text": "3",
+                "shape": "circle",
+                "backgroundColor": "#4338ca",
+                "textColor": "#ffffff",
+                "size": "36px",
+                "fontSize": "15px",
+                "padding": "0px",
+                "bold": "true",
+                "spaced": "",
+                "align": "left"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "86%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>A home-office allowance</strong><br><span style=\"color:#64748b;\">Claim up to USD 300 a year for equipment.</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "16px 26px 0px 26px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#eef2ff;border-radius:14px;padding:18px;border:1px solid #c7d2fe;\"><p style=\"margin:0;\"><strong>&#9744;&nbsp; Please confirm by #form.policy.ackBy#</strong></p><p style=\"margin:6px 0 0 0;color:#475569;\">Read the full policy, then press the button to confirm you understand it.</p></div>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Read and acknowledge",
+        "href": "https://example.com",
+        "backgroundColor": "#4338ca",
+        "borderRadius": "10px",
+        "align": "left",
+        "padding": "20px 32px 32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Questions? Contact People &amp; Culture at hr@example.com.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[{
+    title : '@@etb.block.html@@',
+    properties : [{
+        label : '@@etb.html.warning.title@@',
+        type : 'header',
+        description : '@@etb.html.warning@@'
+    },{
+        name : 'html',
+        label : '@@etb.prop.html@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '16px'
+    },{
+        name : 'color',
+        label : '@@etb.prop.color@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

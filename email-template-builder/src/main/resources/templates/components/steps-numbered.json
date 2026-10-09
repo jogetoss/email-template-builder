@@ -1,0 +1,35 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.StepsBlock",
+    "properties": {
+      "steps": [
+        {
+          "label": "Order placed",
+          "matches": ""
+        },
+        {
+          "label": "Packed",
+          "matches": ""
+        },
+        {
+          "label": "Shipped",
+          "matches": ""
+        },
+        {
+          "label": "Delivered",
+          "matches": ""
+        }
+      ],
+      "current": "3",
+      "previewStep": "3",
+      "doneMark": "number",
+      "color": "#0f766e",
+      "labelColor": "#134e4a",
+      "fontSize": "13px",
+      "lastDone": "true",
+      "mutedColor": "#e2e8f0",
+      "mutedLabelColor": "#94a3b8",
+      "padding": "16px 32px"
+    }
+  }
+}

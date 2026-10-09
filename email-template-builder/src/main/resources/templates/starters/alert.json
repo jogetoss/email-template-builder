@@ -1,0 +1,101 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "[#form.incident.severity#] #form.incident.title#",
+    "preheader": "#form.incident.status#: #form.incident.title#",
+    "backgroundColor": "#f3f4f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#dc2626",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "12px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<div style=\"border-left:6px solid #dc2626;padding:2px 0 2px 16px;\"><p style=\"margin:0;\"><span style=\"display:inline-block;background-color:#fee2e2;color:#b91c1c;border-radius:999px;padding:5px 12px;font-size:11px;letter-spacing:1px;font-weight:bold;\">#form.incident.severity# &middot; #form.incident.status#</span></p><p style=\"margin:10px 0 0 0;font-size:26px;line-height:1.2;color:#111827;\"><strong>#form.incident.title#</strong></p><p style=\"margin:6px 0 0 0;color:#6b7280;\">Affecting #form.incident.service# &middot; #form.incident.impact#</p></div>",
+        "fontSize": "15px",
+        "padding": "32px 32px 16px 26px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:2px;\"><strong>TIMELINE</strong></p>",
+        "fontSize": "11px",
+        "color": "#9ca3af",
+        "padding": "8px 32px 8px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TimelineBlock",
+      "properties": {
+        "items": [
+          {
+            "time": "14:05",
+            "title": "Investigating",
+            "detail": "Sign-ins are failing for some users.",
+            "color": "#dc2626"
+          },
+          {
+            "time": "14:20",
+            "title": "Identified",
+            "detail": "A certificate expired on one login server.",
+            "color": "#f59e0b"
+          },
+          {
+            "time": "14:35",
+            "title": "",
+            "detail": "Next update by 15:00, or sooner if it's fixed.",
+            "color": "#9ca3af"
+          }
+        ],
+        "color": "#6b7280",
+        "filledDots": "true",
+        "monoTime": "true",
+        "timeWidth": "64px",
+        "fontSize": "14px",
+        "titleColor": "#111827",
+        "detailColor": "#374151",
+        "padding": "0px 32px 0px 32px",
+        "lineColor": "#e5e7eb"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Follow the status page",
+        "href": "https://example.com",
+        "backgroundColor": "#dc2626",
+        "borderRadius": "8px",
+        "align": "left",
+        "padding": "8px 32px 32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>You're subscribed to incident alerts for #form.incident.service#.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

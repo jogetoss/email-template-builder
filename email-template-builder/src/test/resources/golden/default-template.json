@@ -1,0 +1,64 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "ET-default",
+    "name": "Default",
+    "description": "",
+    "subject": "Your request has been approved",
+    "preheader": "Hi #currentUser.firstName#, here is an update on your request",
+    "backgroundColor": "#f4f4f4",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#1a73e8",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "id": "text_greeting",
+        "html": "<p><strong>Hi #currentUser.firstName#,</strong></p><p>Your request has been approved. Click this text to edit it.</p>",
+        "align": "left",
+        "fontSize": "16px",
+        "padding": "8px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "id": "button_view",
+        "label": "View request",
+        "href": "https://www.example.com/requests",
+        "backgroundColor": "#6e9f4b",
+        "textColor": "#ffffff",
+        "align": "center",
+        "fontSize": "16px",
+        "borderRadius": "4px",
+        "padding": "12px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "id": "divider_footer",
+        "color": "#dddddd",
+        "thickness": "1px",
+        "width": "100%",
+        "padding": "12px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "id": "text_footer",
+        "html": "<p>This is an automated message.</p>",
+        "align": "left",
+        "fontSize": "12px",
+        "color": "#888888",
+        "padding": "8px 32px"
+      }
+    }
+  ]
+}

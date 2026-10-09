@@ -1,0 +1,36 @@
+[{
+    title : '@@etb.block.text@@',
+    properties : [{
+        name : 'html',
+        label : '@@etb.prop.content@@',
+        description : '@@etb.prop.content.desc@@',
+        type : 'htmleditor'
+    },{
+        name : 'align',
+        label : '@@etb.prop.align@@',
+        type : 'selectbox',
+        value : 'left',
+        options : [{value : 'left', label : '@@etb.align.left@@'}, {value : 'center', label : '@@etb.align.center@@'}, {value : 'right', label : '@@etb.align.right@@'}]
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '16px'
+    },{
+        name : 'color',
+        label : '@@etb.prop.color@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'backgroundColor',
+        label : '@@etb.prop.backgroundColor@@',
+        description : '@@etb.prop.textBackground.desc@@',
+        type : 'etbcolor'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

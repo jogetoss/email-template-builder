@@ -1,0 +1,138 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Save 30% this week only",
+    "preheader": "Upgrade before Friday and save 30%",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#e8590c",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.HeroBlock",
+      "properties": {
+        "headline": "Save 30% this week",
+        "text": "Upgrade before Friday and get every premium feature for less.",
+        "buttonLabel": "Claim my offer",
+        "buttonHref": "https://example.com",
+        "backgroundColor": "#9a3412",
+        "buttonColor": "#ffffff",
+        "buttonTextColor": "#9a3412",
+        "height": "300px",
+        "headlineSize": "34px",
+        "backgroundUrl": "",
+        "textColor": "#ffffff",
+        "align": "center",
+        "padding": "40px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "24px 32px 8px 32px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "backgroundColor": "#fff4e6",
+            "borderColor": "#ffd8a8",
+            "borderRadius": "8px",
+            "padding": "16px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p>Use code <strong>AUTUMN30</strong> at checkout</p>",
+                "align": "center",
+                "fontSize": "18px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "8px 20px 24px 20px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;letter-spacing:2px;color:#e8590c;\"><strong>01</strong></p><p><strong>Fast</strong><br>Set up in minutes.</p>",
+                "align": "center",
+                "fontSize": "14px",
+                "padding": "8px 12px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;letter-spacing:2px;color:#e8590c;\"><strong>02</strong></p><p><strong>Secure</strong><br>Your data stays yours.</p>",
+                "align": "center",
+                "fontSize": "14px",
+                "padding": "8px 12px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;letter-spacing:2px;color:#e8590c;\"><strong>03</strong></p><p><strong>Supported</strong><br>Help when you need it.</p>",
+                "align": "center",
+                "fontSize": "14px",
+                "padding": "8px 12px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>You're receiving this because you opted in to offers.<br><a href=\"https://example.com/unsubscribe\">Unsubscribe</a></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

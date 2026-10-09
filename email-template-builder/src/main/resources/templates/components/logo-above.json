@@ -1,0 +1,21 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.OutsideBlock",
+    "properties": {
+      "padding": "24px 0px 16px 0px"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.TextBlock",
+        "properties": {
+          "html": "<p><strong>#appDef.name#</strong></p>",
+          "align": "center",
+          "fontSize": "22px",
+          "color": "#1f2937",
+          "padding": "0px 32px"
+        }
+      }
+    ]
+  },
+  "place": "first"
+}

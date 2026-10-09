@@ -1,0 +1,11 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {"id": "ET-all", "name": "All blocks", "subject": "Hello #currentUser.firstName#", "preheader": "Note: #form.request.note#"},
+  "elements": [
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p>Hi #currentUser.firstName#, note: <em>#form.request.note#</em></p><ul><li>One</li><li>Two &amp; three</li></ul>", "color": "#444444"}},
+    {"className": "org.joget.etb.lib.ButtonBlock", "properties": {"label": "Review #form.request.id#", "href": "mailto:approver@example.com?subject=#form.request.id#", "backgroundColor": "#b3261e", "textColor": "#ffffff", "borderRadius": "20px", "fontSize": "14px"}},
+    {"className": "org.joget.etb.lib.DividerBlock", "properties": {"color": "#cccccc", "thickness": "2px", "width": "50%"}},
+    {"className": "org.joget.etb.lib.SpacerBlock", "properties": {"height": "40px"}},
+    {"className": "org.joget.etb.lib.TextBlock", "properties": {"html": "<p>Contact <a href=\"https://example.com/help\">support</a>.</p>", "align": "right", "fontSize": "12px"}}
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Q3 2026 in numbers",
+    "preheader": "Revenue, customers and what's next",
+    "backgroundColor": "#f2f2f2",
+    "contentBackground": "#ffffff",
+    "textColor": "#111111",
+    "linkColor": "#e10600",
+    "fontFamily": "Helvetica, Arial, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "0px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:1px;\"><strong>ACME</strong>&nbsp;&nbsp;<span style=\"color:#e10600;\">&#9632;</span>&nbsp;&nbsp;QUARTERLY UPDATE / Q3 2026</p>",
+        "fontSize": "12px",
+        "color": "#111111",
+        "padding": "36px 40px 0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;line-height:0.95;letter-spacing:-2px;\"><strong>Q3<br>in numbers.</strong></p>",
+        "fontSize": "64px",
+        "color": "#111111",
+        "padding": "28px 40px 28px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#111111",
+        "thickness": "2px",
+        "padding": "0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "20px 40px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "50%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;line-height:1;letter-spacing:-2px;\"><strong>+18%</strong></p>",
+                "fontSize": "46px",
+                "color": "#e10600",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "50%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Revenue</strong><br><span style=\"color:#666666;\">Our best quarter yet.</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "20px 40px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "50%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;line-height:1;letter-spacing:-2px;\"><strong>1,240</strong></p>",
+                "fontSize": "46px",
+                "color": "#111111",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "50%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>New customers</strong><br><span style=\"color:#666666;\">Up from 900 in Q2.</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "20px 40px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "50%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;line-height:1;letter-spacing:-2px;\"><strong>97%</strong></p>",
+                "fontSize": "46px",
+                "color": "#111111",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "50%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Kept their plan</strong><br><span style=\"color:#666666;\">Churn at an all-time low.</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#111111",
+        "thickness": "1px",
+        "padding": "0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0 0 6px 0;font-size:11px;letter-spacing:2px;\"><strong>NEXT</strong></p><p>Two new regions open in Q4, and the partner programme starts in November. The full report has the details.</p>",
+        "fontSize": "16px",
+        "color": "#111111",
+        "padding": "24px 40px 8px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Read the full report &rarr;",
+        "href": "https://example.com",
+        "backgroundColor": "#111111",
+        "borderRadius": "0px",
+        "fontSize": "15px",
+        "align": "left",
+        "padding": "12px 40px 40px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>ACME Corporation &middot; Investor relations</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

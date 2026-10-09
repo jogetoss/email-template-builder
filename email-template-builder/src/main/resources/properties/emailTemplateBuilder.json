@@ -1,0 +1,45 @@
+[{
+    title : '@@etb.template.email@@',
+    properties : [{
+        name : 'id',
+        label : '@@etb.template.id@@',
+        type : 'hidden'
+    },{
+        name : 'name',
+        label : '@@etb.template.name@@',
+        type : 'textfield',
+        required : 'True'
+    },{
+        name : 'description',
+        label : '@@etb.template.description@@',
+        type : 'textarea'
+    },{
+        name : 'subject',
+        label : '@@etb.template.subject@@',
+        description : '@@etb.template.subject.desc@@',
+        type : 'textfield'
+    },{
+        name : 'preheader',
+        label : '@@etb.template.preheader@@',
+        description : '@@etb.template.preheader.desc@@',
+        type : 'textfield'
+    },{
+        name : 'variables',
+        label : '@@etb.template.variables@@',
+        description : '@@etb.template.variables.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'name',
+            label : '@@etb.template.variables.name@@',
+            required : 'true'
+        },{
+            key : 'description',
+            label : '@@etb.template.variables.description@@'
+        }]
+    },{
+        name : 'publicUrl',
+        label : '@@etb.template.publicUrl@@',
+        description : '@@etb.template.publicUrl.desc@@',
+        type : 'textfield'
+    }]
+}]

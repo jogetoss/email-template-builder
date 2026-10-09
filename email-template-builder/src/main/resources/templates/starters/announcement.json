@@ -1,0 +1,147 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Memo: #form.announcement.title#",
+    "preheader": "#form.announcement.title#",
+    "backgroundColor": "#e7e5e4",
+    "contentBackground": "#fafaf9",
+    "textColor": "#333333",
+    "linkColor": "#1c1917",
+    "fontFamily": "Georgia, Times New Roman, serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "0px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:8px;\"><strong>MEMORANDUM</strong></p>",
+        "fontSize": "20px",
+        "color": "#1c1917",
+        "padding": "40px 40px 16px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.FactsBlock",
+      "properties": {
+        "facts": [
+          {
+            "label": "To",
+            "value": "All staff"
+          },
+          {
+            "label": "From",
+            "value": "Jane Tan, Chief Operating Officer"
+          },
+          {
+            "label": "Date",
+            "value": "24 September 2026"
+          },
+          {
+            "label": "Re",
+            "value": "<strong>#form.announcement.title#</strong>"
+          }
+        ],
+        "labelStyle": "mono",
+        "valueAlign": "left",
+        "labelWidth": "14%",
+        "dividers": "",
+        "labelColor": "#a8a29e",
+        "valueColor": "#1c1917",
+        "fontSize": "15px",
+        "padding": "0px 40px",
+        "dividerColor": "#eef2f7"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.DividerBlock",
+      "properties": {
+        "color": "#1c1917",
+        "thickness": "3px",
+        "padding": "20px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Dear colleagues,</p><p>Write the announcement here. Keep the first paragraph to the key point: what changes, when, and who is affected.</p><p>Add the details, dates and where to find more information.</p>",
+        "fontSize": "16px",
+        "color": "#292524",
+        "padding": "0px 40px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "20px 40px 40px 40px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "16%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.BadgeBlock",
+              "properties": {
+                "text": "JT",
+                "shape": "circle",
+                "backgroundColor": "#1c1917",
+                "textColor": "#fafaf9",
+                "size": "44px",
+                "fontSize": "15px",
+                "padding": "0px",
+                "bold": "true",
+                "spaced": "",
+                "align": "left"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "width": "84%",
+            "verticalAlign": "middle"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<p style=\"margin:0;\"><strong>Jane Tan</strong><br><span style=\"color:#78716c;\">Chief Operating Officer</span></p>",
+                "fontSize": "15px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>ACME Corporation &middot; Internal. Please do not forward outside the company.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

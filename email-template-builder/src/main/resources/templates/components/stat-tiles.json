@@ -1,0 +1,37 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.StatTilesBlock",
+    "properties": {
+      "tiles": [
+        {
+          "icon": "",
+          "number": "128",
+          "caption": "tasks done",
+          "background": "#eef2ff",
+          "color": "#4338ca"
+        },
+        {
+          "icon": "",
+          "number": "94%",
+          "caption": "on time",
+          "background": "#dcfce7",
+          "color": "#15803d"
+        },
+        {
+          "icon": "",
+          "number": "12",
+          "caption": "overdue",
+          "background": "#fff1e6",
+          "color": "#c2410c"
+        }
+      ],
+      "numberSize": "30px",
+      "fontSize": "13px",
+      "radius": "14px",
+      "tilePadding": "18px",
+      "gap": "12px",
+      "align": "left",
+      "padding": "16px 32px"
+    }
+  }
+}

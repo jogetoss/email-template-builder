@@ -1,0 +1,21 @@
+Subject: Launch: #form.product.name#
+
+ACME Workspace
+
+Products (https://example.com/products)
+Pricing (https://example.com/pricing)
+Support (https://example.com/support)
+
+Meet #form.product.name#
+
+Faster approvals, fewer emails. Available today for every team.
+
+See what's new (https://example.com/launch)
+
+Hi Alex,
+
+Here is what changed and how to get started.
+
+Questions?
+
+Reply to this email and we'll help.

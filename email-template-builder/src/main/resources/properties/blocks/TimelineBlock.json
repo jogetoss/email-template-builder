@@ -1,0 +1,68 @@
+[{
+    title : '@@etb.block.timeline@@',
+    properties : [{
+        name : 'items',
+        label : '@@etb.prop.timeline.items@@',
+        description : '@@etb.prop.timeline.items.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'time',
+            label : '@@etb.prop.timeline.time@@'
+        },{
+            key : 'title',
+            label : '@@etb.prop.callout.title@@'
+        },{
+            key : 'detail',
+            label : '@@etb.prop.timeline.detail@@'
+        },{
+            key : 'color',
+            label : '@@etb.prop.timeline.dotColor@@'
+        }]
+    },{
+        name : 'color',
+        label : '@@etb.prop.timeline.color@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'filledDots',
+        label : '@@etb.prop.timeline.filledDots@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'monoTime',
+        label : '@@etb.prop.timeline.monoTime@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'lineColor',
+        label : '@@etb.prop.timeline.lineColor@@',
+        type : 'etbcolor',
+        value : '#E5E7EB'
+    },{
+        name : 'titleColor',
+        label : '@@etb.prop.callout.titleColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'detailColor',
+        label : '@@etb.prop.timeline.detailColor@@',
+        type : 'etbcolor',
+        value : '#6B7280'
+    },{
+        name : 'timeWidth',
+        label : '@@etb.prop.timeline.timeWidth@@',
+        type : 'textfield',
+        value : '56px'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '15px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

@@ -1,0 +1,17 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.CalloutBlock",
+    "properties": {
+      "style": "box",
+      "icon": "",
+      "title": "Before you start",
+      "text": "Write the note here: what to prepare, or where to find more.",
+      "backgroundColor": "#f1f3f5",
+      "textColor": "#495057",
+      "radius": "10px",
+      "fontSize": "14px",
+      "align": "left",
+      "padding": "8px 32px"
+    }
+  }
+}

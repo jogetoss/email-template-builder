@@ -1,0 +1,71 @@
+[{
+    title : '@@etb.block.steps@@',
+    properties : [{
+        name : 'steps',
+        label : '@@etb.prop.steps@@',
+        description : '@@etb.prop.steps.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'label',
+            label : '@@etb.prop.label@@'
+        },{
+            key : 'matches',
+            label : '@@etb.prop.steps.matches@@'
+        }]
+    },{
+        name : 'current',
+        label : '@@etb.prop.steps.current@@',
+        description : '@@etb.prop.steps.current.desc@@',
+        type : 'textfield',
+        value : '2'
+    },{
+        name : 'previewStep',
+        label : '@@etb.prop.steps.previewStep@@',
+        description : '@@etb.prop.steps.previewStep.desc@@',
+        type : 'textfield',
+        value : '2'
+    },{
+        name : 'lastDone',
+        label : '@@etb.prop.steps.lastDone@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'doneMark',
+        label : '@@etb.prop.steps.doneMark@@',
+        type : 'selectbox',
+        value : 'check',
+        options : [{value : 'check', label : '@@etb.prop.steps.doneMark.check@@'}, {value : 'number', label : '@@etb.prop.steps.doneMark.number@@'}]
+    },{
+        name : 'color',
+        label : '@@etb.prop.steps.color@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'mutedColor',
+        label : '@@etb.prop.steps.mutedColor@@',
+        type : 'etbcolor',
+        value : '#E2E8F0'
+    },{
+        name : 'labelColor',
+        label : '@@etb.prop.steps.labelColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'mutedLabelColor',
+        label : '@@etb.prop.steps.mutedLabelColor@@',
+        type : 'etbcolor',
+        value : '#94A3B8'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '12px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '16px 32px'
+    }]
+}]

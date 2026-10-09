@@ -1,0 +1,71 @@
+[{
+    title : '@@etb.block.facts@@',
+    properties : [{
+        name : 'facts',
+        label : '@@etb.prop.facts@@',
+        description : '@@etb.prop.facts.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'label',
+            label : '@@etb.prop.label@@'
+        },{
+            key : 'value',
+            label : '@@etb.prop.bars.value@@'
+        }]
+    },{
+        name : 'hideEmpty',
+        label : '@@etb.prop.facts.hideEmpty@@',
+        type : 'checkbox',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'labelStyle',
+        label : '@@etb.prop.facts.labelStyle@@',
+        type : 'selectbox',
+        value : 'caps',
+        options : [{value : 'caps', label : '@@etb.prop.facts.labelStyle.caps@@'}, {value : 'plain', label : '@@etb.prop.facts.labelStyle.plain@@'}, {value : 'mono', label : '@@etb.prop.facts.labelStyle.mono@@'}]
+    },{
+        name : 'valueAlign',
+        label : '@@etb.prop.facts.valueAlign@@',
+        type : 'selectbox',
+        value : 'right',
+        options : [{value : 'right', label : '@@etb.prop.facts.valueAlign.right@@'}, {value : 'left', label : '@@etb.prop.facts.valueAlign.left@@'}]
+    },{
+        name : 'labelWidth',
+        label : '@@etb.prop.facts.labelWidth@@',
+        description : '@@etb.prop.facts.labelWidth.desc@@',
+        type : 'textfield',
+        value : '35%'
+    },{
+        name : 'dividers',
+        label : '@@etb.prop.facts.dividers@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'dividerColor',
+        label : '@@etb.prop.facts.dividerColor@@',
+        type : 'etbcolor',
+        value : '#EEF2F7'
+    },{
+        name : 'labelColor',
+        label : '@@etb.prop.facts.labelColor@@',
+        type : 'etbcolor',
+        value : '#94A3B8'
+    },{
+        name : 'valueColor',
+        label : '@@etb.prop.facts.valueColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '14px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

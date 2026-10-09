@@ -1,0 +1,68 @@
+[{
+    title : '@@etb.block.progressBars@@',
+    properties : [{
+        name : 'bars',
+        label : '@@etb.prop.bars@@',
+        description : '@@etb.prop.bars.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'label',
+            label : '@@etb.prop.label@@'
+        },{
+            key : 'value',
+            label : '@@etb.prop.bars.value@@'
+        },{
+            key : 'color',
+            label : '@@etb.prop.color@@'
+        }]
+    },{
+        name : 'showValue',
+        label : '@@etb.prop.bars.showValue@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'previewValue',
+        label : '@@etb.prop.bars.previewValue@@',
+        description : '@@etb.prop.bars.previewValue.desc@@',
+        type : 'textfield',
+        value : '60'
+    },{
+        name : 'color',
+        label : '@@etb.prop.bars.color@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'trackColor',
+        label : '@@etb.prop.bars.trackColor@@',
+        type : 'etbcolor',
+        value : '#E2E8F0'
+    },{
+        name : 'height',
+        label : '@@etb.prop.bars.height@@',
+        type : 'textfield',
+        value : '8px'
+    },{
+        name : 'rounded',
+        label : '@@etb.prop.bars.rounded@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{value : 'true', label : ''}]
+    },{
+        name : 'labelColor',
+        label : '@@etb.prop.bars.labelColor@@',
+        description : '@@etb.prop.color.inherit@@',
+        type : 'etbcolor'
+    },{
+        name : 'fontSize',
+        label : '@@etb.prop.fontSize@@',
+        type : 'textfield',
+        value : '14px'
+    },{
+        name : 'padding',
+        label : '@@etb.prop.padding@@',
+        description : '@@etb.prop.padding.desc@@',
+        type : 'textfield',
+        value : '8px 32px'
+    }]
+}]

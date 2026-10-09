@@ -1,0 +1,87 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "ET-hero",
+    "name": "Hero and navbar",
+    "subject": "Launch: #form.product.name#",
+    "preheader": "Something new from the team",
+    "backgroundColor": "#eef2f6",
+    "contentBackground": "#ffffff",
+    "contentBorderRadius": "12px",
+    "contentShadow": "true",
+    "textColor": "#333333",
+    "linkColor": "#0b5cad",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en"
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"text-align:center\"><strong>ACME Workspace</strong></p>",
+        "padding": "16px 32px 0px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.NavbarBlock",
+      "properties": {
+        "links": [
+          {
+            "label": "Products",
+            "href": "https://example.com/products"
+          },
+          {
+            "label": "Pricing",
+            "href": "https://example.com/pricing"
+          },
+          {
+            "label": "Support",
+            "href": "https://example.com/support"
+          }
+        ],
+        "align": "center",
+        "color": "#2d4a6b",
+        "fontSize": "14px",
+        "linkPadding": "8px 12px",
+        "padding": "0px 32px 8px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.HeroBlock",
+      "properties": {
+        "headline": "Meet #form.product.name#",
+        "text": "Faster approvals, fewer emails. Available today for every team.",
+        "buttonLabel": "See what's new",
+        "buttonHref": "https://example.com/launch",
+        "backgroundUrl": "https://picsum.photos/id/1018/1200/600",
+        "backgroundColor": "#2d4a6b",
+        "textColor": "#ffffff",
+        "height": "320px",
+        "align": "center",
+        "padding": "40px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Hi #currentUser.firstName#,</p><p>Here is what changed and how to get started.</p>"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.HeroBlock",
+      "properties": {
+        "headline": "Questions?",
+        "text": "Reply to this email and we'll help.",
+        "buttonLabel": "",
+        "backgroundUrl": "",
+        "backgroundColor": "#f1f5f9",
+        "textColor": "#1f2937",
+        "height": "180px",
+        "align": "left",
+        "headlineSize": "22px",
+        "padding": "32px"
+      }
+    }
+  ]
+}

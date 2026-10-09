@@ -1,0 +1,19 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.CalloutBlock",
+    "properties": {
+      "style": "quote",
+      "icon": "",
+      "title": "PRIYA NAIR, HEAD OF OPERATIONS",
+      "text": "&ldquo;The fastest process is the one nobody has to think about.&rdquo;",
+      "backgroundColor": "",
+      "accentColor": "#b4432a",
+      "titleColor": "#1c1917",
+      "textColor": "#78716c",
+      "padding": "16px 32px",
+      "radius": "10px",
+      "fontSize": "14px",
+      "align": "left"
+    }
+  }
+}

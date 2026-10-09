@@ -1,0 +1,38 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.StepsBlock",
+    "properties": {
+      "steps": [
+        {
+          "label": "Apply",
+          "matches": ""
+        },
+        {
+          "label": "Screen",
+          "matches": ""
+        },
+        {
+          "label": "Interview",
+          "matches": ""
+        },
+        {
+          "label": "Offer",
+          "matches": ""
+        },
+        {
+          "label": "Start",
+          "matches": ""
+        }
+      ],
+      "current": "4",
+      "previewStep": "4",
+      "color": "#7c3aed",
+      "fontSize": "11px",
+      "padding": "16px 24px",
+      "lastDone": "true",
+      "doneMark": "check",
+      "mutedColor": "#e2e8f0",
+      "mutedLabelColor": "#94a3b8"
+    }
+  }
+}

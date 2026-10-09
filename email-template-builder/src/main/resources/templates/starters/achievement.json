@@ -1,0 +1,136 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "You earned a badge, #currentUser.firstName#!",
+    "preheader": "100 approvals: that's a milestone",
+    "backgroundColor": "#f3f0ff",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#7048e8",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "28px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.BadgeBlock",
+      "properties": {
+        "text": "100",
+        "shape": "circle",
+        "backgroundColor": "#fff3bf",
+        "textColor": "#e67700",
+        "size": "96px",
+        "fontSize": "34px",
+        "align": "center",
+        "padding": "40px 32px 8px 32px",
+        "bold": "true",
+        "spaced": ""
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.BadgeBlock",
+      "properties": {
+        "text": "NEW BADGE UNLOCKED",
+        "shape": "pill",
+        "backgroundColor": "#d3f9d8",
+        "textColor": "#2b8a3e",
+        "align": "center",
+        "padding": "8px 32px",
+        "fontSize": "11px",
+        "size": "44px",
+        "bold": "true",
+        "spaced": "true"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;line-height:1.15;\"><strong>Century Club!</strong></p>",
+        "align": "center",
+        "fontSize": "36px",
+        "color": "#5f3dc4",
+        "padding": "8px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>#currentUser.firstName#, you've approved <strong>100 requests</strong> in #appDef.name#. Your team moves faster because of you.</p>",
+        "align": "center",
+        "fontSize": "16px",
+        "color": "#495057",
+        "padding": "4px 48px 16px 48px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.StatTilesBlock",
+      "properties": {
+        "tiles": [
+          {
+            "icon": "",
+            "number": "4 h",
+            "caption": "average reply",
+            "background": "#e5dbff",
+            "color": "#5f3dc4"
+          },
+          {
+            "icon": "",
+            "number": "12 days",
+            "caption": "streak",
+            "background": "#ffe8cc",
+            "color": "#d9480f"
+          },
+          {
+            "icon": "",
+            "number": "Top 5%",
+            "caption": "of approvers",
+            "background": "#d3f9d8",
+            "color": "#2b8a3e"
+          }
+        ],
+        "numberSize": "20px",
+        "radius": "24px",
+        "tilePadding": "16px",
+        "captionColor": "#495057",
+        "align": "center",
+        "padding": "0px 32px",
+        "fontSize": "13px",
+        "gap": "12px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Share with my team",
+        "href": "https://example.com",
+        "backgroundColor": "#7048e8",
+        "borderRadius": "999px",
+        "fontSize": "16px",
+        "padding": "28px 32px 40px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Badges are part of #appDef.name# recognition. <a href=\"https://example.com/badges\">See all badges</a></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

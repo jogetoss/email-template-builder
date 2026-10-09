@@ -1,0 +1,19 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.CalloutBlock",
+    "properties": {
+      "style": "bar",
+      "icon": "&#9888;",
+      "title": "Action needed by #form.request.date#",
+      "text": "Explain what happens if nothing is done.",
+      "backgroundColor": "#fffbeb",
+      "accentColor": "#f59e0b",
+      "titleColor": "#92400e",
+      "textColor": "#78350f",
+      "radius": "8px",
+      "fontSize": "14px",
+      "align": "left",
+      "padding": "8px 32px"
+    }
+  }
+}

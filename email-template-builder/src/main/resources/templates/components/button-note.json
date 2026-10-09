@@ -1,0 +1,37 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.RowBlock",
+    "properties": {
+      "padding": "16px 32px"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {},
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.ButtonBlock",
+            "properties": {
+              "label": "Open the request",
+              "href": "https://example.com",
+              "backgroundColor": "#1f2937",
+              "borderRadius": "10px",
+              "fontSize": "16px",
+              "padding": "0px"
+            }
+          },
+          {
+            "className": "org.joget.etb.lib.TextBlock",
+            "properties": {
+              "html": "<p style=\"margin:0;\">The link works for 7 days.</p>",
+              "align": "center",
+              "fontSize": "12px",
+              "color": "#6b7280",
+              "padding": "10px 0px 0px 0px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Daily Update for {var.teamName}",
+    "preheader": "What changed for {var.teamName} since yesterday",
+    "backgroundColor": "#f4f4f4",
+    "contentBackground": "#ffffff",
+    "textColor": "#333333",
+    "linkColor": "#0b5cad",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "8px",
+    "contentShadow": "true",
+    "variables": [
+      {
+        "name": "teamName",
+        "description": "Team or board the updates are for"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Daily Update for {var.teamName}</p>",
+        "backgroundColor": "#0b5641",
+        "color": "#ffffff",
+        "align": "center",
+        "fontSize": "20px",
+        "padding": "32px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p><strong>#date.EEE, d MMM yyyy#</strong></p>",
+        "align": "center",
+        "fontSize": "18px",
+        "padding": "16px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RepeatBlock",
+      "properties": {
+        "listId": "",
+        "sampleRows": "{\"columns\": [{\"name\": \"title\", \"label\": \"Title\"}, {\"name\": \"link\", \"label\": \"Link\"}, {\"name\": \"author\", \"label\": \"Author\"}, {\"name\": \"when\", \"label\": \"When\"}, {\"name\": \"summary\", \"label\": \"Summary\"}], \"rows\": [{\"title\": \"Decide on the launch date\", \"link\": \"https://example.com/task/1\", \"author\": \"Priya Nair\", \"when\": \"24 Sep 2026 09:21\", \"summary\": \"Status changed from New to In progress\"}, {\"title\": \"Security review of the portal\", \"link\": \"https://example.com/task/2\", \"author\": \"Sam Lee\", \"when\": \"24 Sep 2026 11:05\", \"summary\": \"Added a comment: the scan found no critical issues\"}, {\"title\": \"Migrate the reports server\", \"link\": \"https://example.com/task/3\", \"author\": \"Alex Tan\", \"when\": \"24 Sep 2026 16:40\", \"summary\": \"Progress changed from 60 to 100\"}]}",
+        "emptyText": "No updates since yesterday.",
+        "filterParams": [
+          {
+            "name": "dateCreated",
+            "value": "#date.DAY-1.yyyy-MM-dd#"
+          },
+          {
+            "name": "dateCreated",
+            "value": "#date.DAY-0.yyyy-MM-dd#"
+          }
+        ],
+        "sortBy": "dateCreated",
+        "sortDesc": "true",
+        "maxRows": "20",
+        "card": "true",
+        "cardBackground": "#f8fafc",
+        "borderColor": "#e5e7eb",
+        "cardRadius": "6px",
+        "cardGap": "12px",
+        "cardPadding": "6px 0px",
+        "padding": "12px 24px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><a href=\"{row.link}\"><strong>{row.title}</strong></a></p>",
+            "fontSize": "15px",
+            "padding": "4px 16px 0px 16px"
+          }
+        },
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><strong>{row.author}</strong> on {row.when}</p><p>{row.summary}</p>",
+            "fontSize": "14px",
+            "padding": "0px 16px 4px 16px"
+          }
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Open #appDef.name# for more details. Thanks.</p>",
+        "fontSize": "15px",
+        "padding": "8px 32px 24px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Powered by #appDef.name#</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

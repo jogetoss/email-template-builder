@@ -1,0 +1,48 @@
+{
+  "element": {
+    "className": "org.joget.etb.lib.RowBlock",
+    "properties": {
+      "padding": "8px 26px",
+      "keepSideBySide": "true"
+    },
+    "elements": [
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {},
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.ButtonBlock",
+            "properties": {
+              "label": "Accept",
+              "href": "https://example.com",
+              "backgroundColor": "#16a34a",
+              "borderRadius": "8px",
+              "fontSize": "15px",
+              "align": "right",
+              "padding": "12px 6px"
+            }
+          }
+        ]
+      },
+      {
+        "className": "org.joget.etb.lib.ColumnBlock",
+        "properties": {},
+        "elements": [
+          {
+            "className": "org.joget.etb.lib.ButtonBlock",
+            "properties": {
+              "label": "Decline",
+              "href": "https://example.com",
+              "backgroundColor": "#f1f3f5",
+              "textColor": "#495057",
+              "borderRadius": "8px",
+              "fontSize": "15px",
+              "align": "left",
+              "padding": "12px 6px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "{var.monthName} at a glance",
+    "preheader": "{var.tasksDone} tasks done, {var.onTime} on time",
+    "backgroundColor": "#eef1f7",
+    "contentBackground": "#ffffff",
+    "textColor": "#0f172a",
+    "linkColor": "#6366f1",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "20px",
+    "contentShadow": "true",
+    "variables": [
+      {
+        "name": "monthName",
+        "description": "Month shown in the title"
+      },
+      {
+        "name": "tasksDone",
+        "description": "Tasks completed"
+      },
+      {
+        "name": "onTime",
+        "description": "Share done on time"
+      },
+      {
+        "name": "overdue",
+        "description": "Tasks overdue"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;letter-spacing:2px;\"><strong>MONTHLY REPORT</strong></p>",
+        "fontSize": "12px",
+        "color": "#6366f1",
+        "padding": "36px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:4px 0 0 0;\"><strong>{var.monthName} at a glance</strong></p>",
+        "fontSize": "30px",
+        "color": "#0f172a",
+        "padding": "0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p>Here's how #appDef.name# did this month, #currentUser.firstName#.</p>",
+        "fontSize": "15px",
+        "color": "#64748b",
+        "padding": "4px 32px 16px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.StatTilesBlock",
+      "properties": {
+        "tiles": [
+          {
+            "icon": "",
+            "number": "{var.tasksDone}",
+            "caption": "tasks done",
+            "background": "#e7f6ec",
+            "color": "#15803d"
+          },
+          {
+            "icon": "",
+            "number": "{var.onTime}",
+            "caption": "on time",
+            "background": "#e8efff",
+            "color": "#1d4ed8"
+          },
+          {
+            "icon": "",
+            "number": "{var.overdue}",
+            "caption": "overdue",
+            "background": "#fff1e6",
+            "color": "#c2410c"
+          }
+        ],
+        "numberSize": "34px",
+        "radius": "16px",
+        "captionColor": "#334155",
+        "padding": "0px 32px",
+        "fontSize": "13px",
+        "tilePadding": "18px",
+        "gap": "12px",
+        "align": "left"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;\"><strong>Goals</strong></p>",
+        "fontSize": "15px",
+        "color": "#0f172a",
+        "padding": "24px 32px 0px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.ProgressBarsBlock",
+      "properties": {
+        "bars": [
+          {
+            "label": "Close support tickets",
+            "value": "86",
+            "color": "#22c55e"
+          },
+          {
+            "label": "Ship the release",
+            "value": "64",
+            "color": "#6366f1"
+          },
+          {
+            "label": "Onboard new hires",
+            "value": "40",
+            "color": "#f97316"
+          }
+        ],
+        "fontSize": "13px",
+        "labelColor": "#334155",
+        "padding": "10px 32px 8px 32px",
+        "showValue": "true",
+        "previewValue": "60",
+        "trackColor": "#e2e8f0",
+        "height": "8px",
+        "rounded": "true"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "16px 26px 8px 26px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#ffffff;border-radius:12px;padding:14px;border:1px solid #e2e8f0;min-height:44px;\"><p style=\"margin:0;\"><strong>Top team</strong><br><span style=\"color:#64748b;\">Customer Care closed 312 tickets.</span></p></div>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#ffffff;border-radius:12px;padding:14px;border:1px solid #e2e8f0;min-height:44px;\"><p style=\"margin:0;\"><strong>Biggest win</strong><br><span style=\"color:#64748b;\">Approvals take 1.2 days, down from 3.</span></p></div>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.ButtonBlock",
+      "properties": {
+        "label": "Open the full report",
+        "href": "https://example.com",
+        "backgroundColor": "#0f172a",
+        "borderRadius": "10px",
+        "padding": "20px 32px 36px 32px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p>Sent on the first working day of each month by #appDef.name#.</p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}

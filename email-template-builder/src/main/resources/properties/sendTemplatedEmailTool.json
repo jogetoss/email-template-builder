@@ -1,0 +1,431 @@
+[{
+    title : '@@etb.tool.title@@',
+    properties : [{
+        name : 'templateId',
+        label : '@@etb.tool.template@@',
+        description : '@@etb.tool.template.desc@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/cbuilder/emailtemplate/options'
+    },
+    {
+        name : 'variables',
+        label : '@@etb.tool.variables@@',
+        description : '@@etb.tool.variables.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'name',
+            label : '@@etb.tool.variables.name@@',
+            options_ajax_on_change : 'templateId',
+            options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.etb.EmailTemplateBuilder/service?action=templateVariables'
+        },{
+            key : 'value',
+            label : '@@etb.tool.variables.value@@'
+        }]
+    },
+    {
+        name : 'toSpecific',
+        label : '@@app.emailtool.toEmail@@',
+        type : 'textfield',
+        js_validation: function(fieldName, value) {
+            var parentElement = document.querySelector('[property-name="toSpecific"]');
+            var inputElement = parentElement.querySelector('input');
+            var inputValue = inputElement.value;
+            var errorMsg = "";
+            
+            const hashVariablePattern = /^\$.*\$|^#.*#|^\${.*}|^%.*%|^\[.*\]|^<.*>$/;
+
+            if (inputValue === "" || hashVariablePattern.test(inputValue) || !inputValue.includes('@')) {
+                return "";
+            }
+            
+            $.ajax({
+                url: UI.base + "/web/api/validateEmail",
+                type: 'POST',
+                data: {
+                    email: inputValue,
+                    multiple: true
+                },
+                headers: {
+                    "FETCH-CSRF-TOKEN-PARAM": "true",
+                    "FETCH-CSRF-TOKEN": "true"
+                },
+                async: false, 
+                success: function(response) {
+                    if (response && typeof response === 'object' && !response.isValid) {
+                        if (!response.isValid) {
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('POST', UI.base + '/web/userview/' + UI.userview_app_id + '/appI18nMessages', false);
+                            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState === 4 && xhr.status === 200) {
+                                    var messages = JSON.parse(xhr.responseText);
+                                    UI.messages = $.extend(UI.messages || {}, messages);
+                                    errorMsg = messages['app.edm.message.invalidEmailFormat'];
+                                }
+                            };
+                            xhr.send('keys[]=app.edm.message.invalidEmailFormat');
+                        }
+                    }
+                },
+            });
+
+            return errorMsg;
+        }
+    },
+    {
+        name : 'toParticipantId',
+        label : '@@app.emailtool.toPid@@',
+        type : 'textfield'
+    },
+    {
+        name : 'cc',
+        label : '@@app.emailtool.cc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'bcc',
+        label : '@@app.emailtool.bcc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'subject',
+        label : '@@app.emailtool.subject@@',
+        description : '@@etb.tool.subject.desc@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@app.emailtool.smtpSetting@@',
+    properties : [{
+        name : 'from',
+        label : '@@app.emailtool.from@@',
+        type : 'textfield',
+        description : '@@app.emailtool.from.desc@@',
+        js_validation: function(fieldName, value) {
+            var parentElement = document.querySelector('[property-name="from"]');
+            var inputElement = parentElement.querySelector('input');
+            var inputValue = inputElement.value;
+            var errorMsg = "";
+            
+            const hashVariablePattern =/^\$.*\$|^#.*#|^\${.*}|^%.*%|^\[.*\]|^<.*>$/;
+
+            if (inputValue === "" || hashVariablePattern.test(inputValue)) {
+                return "";
+            }
+
+            $.ajax({
+                url: UI.base + "/web/api/validateEmail",
+                type: 'POST',
+                data: {
+                    email: inputValue,
+                    multiple: false
+                },
+                headers: {
+                    "FETCH-CSRF-TOKEN-PARAM": "true",
+                    "FETCH-CSRF-TOKEN": "true"
+                },
+                async: false, 
+                success: function(response) {
+                    if (response && typeof response === 'object' && !response.isValid) {
+                        if (!response.isValid) {
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('POST', UI.base + '/web/userview/' + UI.userview_app_id + '/appI18nMessages', false);
+                            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState === 4 && xhr.status === 200) {
+                                    var messages = JSON.parse(xhr.responseText);
+                                    UI.messages = $.extend(UI.messages || {}, messages);
+                                    errorMsg = messages['app.edm.message.invalidEmailFormat'];
+                                }
+                            };
+                            xhr.send('keys[]=app.edm.message.invalidEmailFormat');
+                        }
+                    }
+                },
+            });
+
+            return errorMsg;
+        }
+    },
+    {
+        name : 'host',
+        label : '@@app.emailtool.host@@',
+        type : 'textfield',
+        description : '@@app.emailtool.host.desc@@'
+    },
+    {
+        name : 'port',
+        label : '@@app.emailtool.port@@',
+        type : 'textfield',
+        description : '@@app.emailtool.port.desc@@'
+    },
+    {
+        name : 'security',
+        label : '@@app.emailtool.security@@',
+        type : 'selectbox',
+        description : '@@app.emailtool.security.desc@@',
+        options : [{
+            value : '',
+            label : ''
+        },
+        {
+            value : 'TLS',
+            label : '@@app.emailtool.security.tls@@'
+        },
+        {
+            value : 'SSL',
+            label : '@@app.emailtool.security.ssl@@'
+        }],
+        supportHash : 'true'
+    },
+    {
+        name : 'username',
+        label : '@@app.emailtool.username@@',
+        type : 'textfield'
+    },
+    {
+        name : 'password',
+        label : '@@app.emailtool.password@@',
+        type : 'password'
+    },
+    {
+        label : '@@app.emailtool.digitalSignature@@',
+        type : 'header'
+    },
+    {
+        name : 'p12',
+        label : '@@app.emailtool.p12path@@',
+        description : '@@app.emailtool.p12path.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'storepass',
+        label : '@@app.emailtool.storepass@@',
+        type : 'password'
+    },
+    {
+        name : 'alias',
+        label : '@@app.emailtool.issuerAlias@@',
+        type : 'textfield'
+    },
+    {
+        label : '@@app.emailtool.error@@',
+        type : 'header'
+    },
+    {
+        name : 'retryCount',
+        label : '@@app.emailtool.retryCount@@',
+        type : 'number'
+    },
+    {
+        name : 'retryInterval',
+        label : '@@app.emailtool.retryInterval@@',
+        type : 'number'
+    }],
+    validators : [{  
+        type : 'AJAX',
+        url : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.app.lib.EmailTool/service?action=validate',
+        default_error_message : '@@app.emailtool.error.smtp@@',
+        method : 'POST'
+    }],
+    buttons : [{
+        name : 'testmail',    
+        label : '@@app.emailtool.sendTestMail@@',
+        ajax_url : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.app.lib.EmailTool/service?action=testmail',
+        fields : ['from', 'host', 'port', 'security', 'username', 'password'],
+        addition_fields : [
+            {
+                name : 'toSpecific',
+                label : '@@app.emailtool.toEmail@@',
+                type : 'textfield',
+                required : 'True'
+            }
+        ]
+    }]
+},
+{
+    title : '@@app.emailtool.attachments@@',
+    properties : [{
+        name:'formDefId',
+        label:'@@app.emailtool.form@@',
+        type:'selectbox',
+        options_ajax:'[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options',
+    },
+    {
+        name:'fields',
+        label:'@@app.emailtool.fields@@',
+        type:'grid',
+        columns:[{
+            key:'field',
+            label:'@@app.emailtool.fieldId@@',
+            options_ajax_on_change : 'formDefId',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+        },
+        {
+            key:'embed',
+            label:'@@app.emailtool.embed@@',
+            type:'truefalse'
+        }]
+    },
+    {
+        name:'files',
+        label:'@@app.emailtool.files@@',
+        type:'grid',
+        columns:[{
+            key:'path',
+            label:'@@app.emailtool.path@@'
+        },
+        {
+            key:'type',
+            label:'@@app.emailtool.pathType@@',
+            options: [{
+                value : 'system',
+                label : '@@app.emailtool.pathType.system@@'
+            },
+            {
+                value : 'url',
+                label : '@@app.emailtool.pathType.url@@'
+            }]
+        },
+        {
+            key:'fileName',
+            label:'@@app.emailtool.fileName@@'
+        },
+        {
+            key:'embed',
+            label:'@@app.emailtool.embed@@',
+            type:'truefalse'
+        }],
+        developer_mode : 'advanced'
+    },
+    {
+        label : '@@app.emailtool.ics@@',
+        type : 'header',
+        description : '@@app.emailtool.ics.desc@@',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsAttachement',
+        label : '@@app.emailtool.icsAttachement@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }],
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsEventName',
+        label : '@@app.emailtool.icsEventName@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsDateStart',
+        label : '@@app.emailtool.icsDateStart@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        required : 'true',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsDateEnd',
+        label : '@@app.emailtool.icsDateEnd@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsDateFormat',
+        label : '@@app.emailtool.icsDateFormat@@',
+        type : 'textfield',
+        value : 'yyyy-MM-dd HH:mm',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        required : 'true',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsTimezone',
+        label : '@@app.emailtool.icsTimezone@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsAllDay',
+        label : '@@app.emailtool.icsAllDay@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }],
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        supportHash : 'true',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsEventDesc',
+        label : '@@app.emailtool.icsEventDesc@@',
+        type : 'textarea',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsLocation',
+        label : '@@app.emailtool.icsLocation@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    },
+    {
+        name : 'icsOrganizerEmail',
+        label : '@@app.emailtool.icsOrganizerEmail@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    },
+    {
+        name:'icsAttendees',
+        label:'@@app.emailtool.icsAttendees@@',
+        type:'grid',
+        columns:[{
+            key:'name',
+            label:'@@app.emailtool.icsAttendees.name@@',
+            required : 'true'
+        },
+        {
+            key:'email',
+            label:'@@app.emailtool.icsAttendees.email@@',
+            required : 'true'
+        },
+        {
+            key:'required',
+            label:'@@app.emailtool.icsAttendees.required@@',
+            type: 'truefalse'
+        }],
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        developer_mode : 'advanced'
+    }]
+}]

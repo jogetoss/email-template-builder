@@ -1,0 +1,126 @@
+{
+  "className": "org.joget.etb.EmailTemplateBuilder",
+  "properties": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "subject": "Deploy #form.build.status#: #form.build.name#",
+    "preheader": "#form.build.name# #form.build.status# in #form.build.duration#",
+    "backgroundColor": "#010409",
+    "contentBackground": "#0d1117",
+    "textColor": "#e5e7eb",
+    "linkColor": "#58a6ff",
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "width": "600px",
+    "language": "en",
+    "contentBorderRadius": "10px",
+    "contentShadow": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<p style=\"margin:0;font-family:Courier New, Courier, monospace;\"><span style=\"color:#ff5f56;\">&#9679;</span> <span style=\"color:#ffbd2e;\">&#9679;</span> <span style=\"color:#27c93f;\">&#9679;</span>&nbsp;&nbsp;<span style=\"color:#6b7280;\">deploy &mdash; #form.build.name#</span></p>",
+        "fontSize": "12px",
+        "padding": "20px 28px 8px 28px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.TextBlock",
+      "properties": {
+        "html": "<div style=\"font-family:Courier New, Courier, monospace;line-height:1.7;\"><p style=\"margin:0;color:#9ca3af;\">$ <span style=\"color:#e5e7eb;\">deploy --env production</span></p><p style=\"margin:0;color:#27c93f;\">&#10003; install &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12s</p><p style=\"margin:0;color:#27c93f;\">&#10003; test &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1m 04s</p><p style=\"margin:0;color:#27c93f;\">&#10003; build &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48s</p><p style=\"margin:0;color:#27c93f;\">&#10003; release &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21s</p><p style=\"margin:10px 0 0 0;color:#e5e7eb;\"><strong>&#9632; #form.build.status#</strong> <span style=\"color:#6b7280;\">in #form.build.duration#</span><span style=\"color:#27c93f;\">&#9608;</span></p></div>",
+        "fontSize": "14px",
+        "padding": "8px 28px 16px 28px"
+      }
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 22px 8px 22px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {
+            "padding": "6px"
+          },
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.TextBlock",
+              "properties": {
+                "html": "<div style=\"background-color:#161b22;border-radius:8px;padding:16px;border:1px solid #30363d;\"><p style=\"margin:0;font-family:Courier New, Courier, monospace;font-size:11px;color:#6b7280;\">COMMIT</p><p style=\"margin:6px 0 0 0;font-family:Courier New, Courier, monospace;color:#fbbf24;\">#form.build.commit#</p><p style=\"margin:4px 0 0 0;color:#d1d5db;\">#form.build.message#</p><p style=\"margin:4px 0 0 0;color:#6b7280;\">by #form.build.author#</p></div>",
+                "fontSize": "14px",
+                "padding": "0px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.RowBlock",
+      "properties": {
+        "padding": "0px 22px 24px 22px",
+        "keepSideBySide": "true"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "View logs",
+                "href": "https://example.com",
+                "backgroundColor": "#27c93f",
+                "textColor": "#0d1117",
+                "borderRadius": "6px",
+                "fontSize": "14px",
+                "align": "right",
+                "padding": "16px 6px"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.etb.lib.ColumnBlock",
+          "properties": {},
+          "elements": [
+            {
+              "className": "org.joget.etb.lib.ButtonBlock",
+              "properties": {
+                "label": "Open the app",
+                "href": "https://example.com",
+                "backgroundColor": "#21262d",
+                "textColor": "#e5e7eb",
+                "borderRadius": "6px",
+                "fontSize": "14px",
+                "align": "left",
+                "padding": "16px 6px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.etb.lib.OutsideBlock",
+      "properties": {
+        "padding": "20px 0px 28px 0px"
+      },
+      "elements": [
+        {
+          "className": "org.joget.etb.lib.TextBlock",
+          "properties": {
+            "html": "<p><span style=\"color:#6b7280;font-family:Courier New, Courier, monospace;\">#appDef.name# &middot; ci</span></p>",
+            "align": "center",
+            "fontSize": "12px",
+            "color": "#6b7785",
+            "padding": "0px 32px"
+          }
+        }
+      ]
+    }
+  ]
+}
