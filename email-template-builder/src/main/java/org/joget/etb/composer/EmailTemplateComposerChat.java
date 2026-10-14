@@ -204,7 +204,7 @@ public class EmailTemplateComposerChat extends AbstractComposerChat {
                 case "agentic_edit":
                 default:
                     if (ensureAiServiceConfigured(session, type)) {
-                        EmailTemplateComposerService.edit(this, session, incoming, executorService);
+                        EmailTemplateComposerService.edit(this, session, incoming);
                     }
             }
         } catch (Exception e) {

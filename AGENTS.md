@@ -45,7 +45,7 @@ The jar to install is `email-template-builder/target/email-template-builder-9.0-
 - The manifest carries `Joget-Name` and `Joget-Description`.
 - **Upgrading from `email-template-builder-1.0-SNAPSHOT.jar`:** uninstall it in **Manage Plugins** first. A jar with a new file name installs next to the old one, not over it. Templates are stored in the app and are not affected.
 
-**Tests (189: 188 unit, 1 integration; 18 of them are the AI Composer's and need the `ai-composer` profile):**
+**Tests (190: 189 unit, 1 integration; 19 of them are the AI Composer's and need the `ai-composer` profile):**
 - rendering rules and golden snapshots (`email-template-builder/src/test/resources/golden`)
 - merge-value escaping against a stand-in that behaves like Joget's `AppUtil.processHashVariable`, and templates that include themselves
 - HTML-to-text, the URL allowlist, and the record and tracking resolvers
@@ -199,7 +199,8 @@ With agent-builder installed, the builder gets agent-builder's **AI Composer** c
 **Who can use it, and what it sends:**
 - DX 9 lets anyone open a plugin's WebSocket, and agent-builder's base chat checks no role, so the composer checks every message itself. An anonymous user gets an error and the socket closes (code 1008).
 - Each request also needs the right to design its app: an admin, or a user DX found may edit that app (an App Designer or app creator). DX's own check needs an HTTP request, which a WebSocket message hasn't, so the composer reads the answer DX caches in the HTTP session (`USER_EDITABLE_APPS`) when the user opens the app's builder. `mayDesign` has the rule, unit-tested on its own.
-- A request for an app that doesn't exist is refused. The run carries the user's security context, username and host profile to its worker thread, and clears them after.
+- A request for an app that doesn't exist is refused.
+- Each run gets its own `PluginThread`, made on the socket's thread, rather than going to agent-builder's pooled executor. The platform carries the tenant profile to it on every DX 9 version, and the user too from DX 9.1. `asUser` sets the user only where the platform didn't (DX 9.0, 9.1.1.1). DX Cloud refuses plugin code that sets the profile or the security context on a plain pooled thread, and a reused pool thread keeps the tenant of whichever thread created it. Don't move runs back to the executor.
 - The greeting says what goes to the AI service: the user's messages, attached images and the template. Test data stays in the browser, and `check_email` renders in builder mode, so no datalist rows are read.
 
 **Run handling:**
