@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.ExecutorService;
 import org.joget.ai.agent.core.AgentFactory;
 import org.joget.ai.agent.lib.composer.AbstractComposerChat;
 import org.joget.ai.agent.model.AgentComponent;
@@ -27,14 +26,12 @@ import org.joget.ai.config.utils.CredentialUtil;
 import org.joget.apps.app.dao.AppDefinitionDao;
 import org.joget.apps.app.model.AppDefinition;
 import org.joget.apps.app.service.AppUtil;
-import org.joget.commons.util.HostManager;
 import org.joget.commons.util.LogUtil;
+import org.joget.commons.util.PluginThread;
 import org.joget.plugin.base.PluginManager;
 import org.joget.workflow.model.service.WorkflowUserManager;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * One chat turn of the Email Template composer: the user's request, the template open in the builder (and the
@@ -46,43 +43,25 @@ final class EmailTemplateComposerService {
     private EmailTemplateComposerService() {
     }
 
-    /** The user's security context, username and host profile, from the WebSocket's thread to the worker's. */
-    static final class Identity {
-        final SecurityContext context;
-        final String username;
-        final String profile;
-
-        private Identity(SecurityContext context, String username, String profile) {
-            this.context = context;
-            this.username = username;
-            this.profile = profile;
-        }
-
-        static Identity capture() {
-            return new Identity(SecurityContextHolder.getContext(), users().getCurrentUsername(), HostManager.getCurrentProfile());
-        }
-
-        void apply() {
-            SecurityContextHolder.setContext(context);
-            users().setCurrentThreadUser(username);
-            try {
-                HostManager.setCurrentProfile(profile);
-            } catch (RuntimeException e) {
-                // a server that doesn't let plugins set the profile ("security protected in Cloud installation"): the worker keeps its own
-                LogUtil.debug(EmailTemplateComposerService.class.getName(), "Profile not set: " + e.getMessage());
+    /**
+     * The task, run as this user. A {@link PluginThread} restores the submitting thread's user itself from DX 9.1
+     * (wrapWithCurrentUserIdentity); before that it carries only the tenant profile, so the user is set here, and
+     * cleared after, only when the thread doesn't already have it.
+     */
+    static Runnable asUser(WorkflowUserManager wum, String username, Runnable task) {
+        return () -> {
+            boolean set = username != null && !username.equals(wum.getCurrentThreadUser());
+            if (set) {
+                wum.setCurrentThreadUser(username);
             }
-        }
-
-        /** Pooled threads are reused: never hand this user, or this tenant, to the next task. */
-        static void clear() {
-            users().clearCurrentThreadUser();
-            SecurityContextHolder.clearContext();
             try {
-                HostManager.setCurrentProfile(null);
-            } catch (RuntimeException e) {
-                LogUtil.debug(EmailTemplateComposerService.class.getName(), "Profile not cleared: " + e.getMessage());
+                task.run();
+            } finally {
+                if (set) {
+                    wum.clearCurrentThreadUser();
+                }
             }
-        }
+        };
     }
 
     private static final class EmailTemplateAgent extends SystemAgentAbstract {
@@ -165,7 +144,7 @@ final class EmailTemplateComposerService {
         }
     }
 
-    static void edit(Object caller, Session session, JSONObject incoming, ExecutorService executor) {
+    static void edit(Object caller, Session session, JSONObject incoming) {
         JSONObject json = incoming.optJSONObject("json");
         if (json == null) {
             ComposerSocket.error(caller, session, "The email template could not be read from the builder.", null);
@@ -181,16 +160,13 @@ final class EmailTemplateComposerService {
         String runId = "RUN-" + UUID.randomUUID();
         session.getUserProperties().put("etbRunId", runId);
         String composerClass = AbstractComposerChat.getActiveComposerClass(EmailTemplateComposerChat.class);
-        // who asked, and in which tenant, carried to the pooled worker thread (whose own are left from any earlier run)
-        Identity who = Identity.capture();
-        executor.submit(AbstractComposerChat.withComposerContext(composerClass, () -> {
-            who.apply();
-            try {
-                run(caller, session, incoming, json, runId);
-            } finally {
-                Identity.clear();
-            }
-        }));
+        // Its own PluginThread, made here on the socket's thread, not agent-builder's pooled executor: the platform
+        // carries this thread's tenant profile (and, from DX 9.1, its user) to it, which DX Cloud refuses to let
+        // plugin code do on a plain pooled thread. A reused pool thread would keep whichever tenant created it.
+        Thread worker = new PluginThread(asUser(users(), users().getCurrentUsername(),
+                AbstractComposerChat.withComposerContext(composerClass, () -> run(caller, session, incoming, json, runId))));
+        worker.setName("EmailTemplateComposer-" + runId);
+        worker.start();
     }
 
     private static void run(Object caller, Session session, JSONObject incoming, JSONObject original, String runId) {
@@ -299,7 +275,7 @@ final class EmailTemplateComposerService {
                 f.delete();
             }
             session.getUserProperties().remove("etbRunId", runId);
-            // pooled worker threads are reused: never hand this app to the next run
+            // leave no app behind on the thread
             AppUtil.setCurrentAppDefinition(null);
         }
     }

@@ -211,6 +211,31 @@ public class EmailTemplateComposerToolTest {
     }
 
     @Test
+    public void theRunIsTheRequestersOnItsOwnThread() throws Exception {
+        org.joget.workflow.model.service.WorkflowUserManager wum = new org.joget.workflow.model.service.WorkflowUserManager();
+        String[] seen = new String[3];
+        // DX 9.0 and 9.1.1.1: the PluginThread brings no user, so the run sets it and clears it after
+        Thread fresh = new Thread(() -> {
+            EmailTemplateComposerService.asUser(wum, "mei", () -> seen[0] = wum.getCurrentThreadUser()).run();
+            seen[1] = String.valueOf(wum.getCurrentThreadUser());
+        });
+        fresh.start();
+        fresh.join();
+        assertEquals("mei", seen[0]);
+        assertEquals("cleared after the run", "null", seen[1]);
+        // DX 9.1 and later: the platform restored the user already; the run leaves it to the platform to clear
+        Thread restored = new Thread(() -> {
+            wum.setCurrentThreadUser("mei");
+            EmailTemplateComposerService.asUser(wum, "mei", () -> { }).run();
+            seen[2] = wum.getCurrentThreadUser();
+            wum.clearCurrentThreadUser();
+        });
+        restored.start();
+        restored.join();
+        assertEquals("mei", seen[2]);
+    }
+
+    @Test
     public void stepsAreNamedForTheChat() {
         assertEquals("Adding the \"callout-note\" component", EmailTemplateComposerTool.stepLabel("insert_component", new JSONObject().put("id", "callout-note")));
         assertEquals("Checking the email", EmailTemplateComposerTool.stepLabel("check_email", new JSONObject()));
